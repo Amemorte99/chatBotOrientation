@@ -1,53 +1,490 @@
 {
-    "intents": [
+  "intents": [
+    {
+      "tag": "formation_info",
+      "patterns": [
+        "Informations sur la formation en Commerce International",
+        "Détails de la LPCI",
+        "Que puis-je savoir sur la Licence Professionnelle en Commerce International ?"
+      ],
+      "responses": [
+        "La Licence Professionnelle en Commerce International (LPCI) à l'ESGIS est une formation de 6 semestres (3 ans) dans le domaine de la Gestion.",
+        "La formation comprend des cours en tronc commun pour les semestres 1 à 4 en présentiel, et des cours de spécialisation pour les semestres 5 et 6 en présentiel et en ligne.",
+        "Un stage obligatoire d'au moins deux mois est requis aux semestres 5 et 6, suivi de la rédaction et de la présentation d'un rapport.",
+        "Les objectifs de la formation incluent la capacité à mener des opérations de prospection et de vente à l'étranger, assurer le suivi administratif des opérations internationales et gérer les relations commerciales en langues étrangères."
+      ]
+    },
+    {
+      "tag": "profil_entree",
+      "patterns": [
+        "Profil d'entrée pour la LPCI",
+        "Conditions d'admission",
+        "Qui peut s'inscrire ?"
+      ],
+      "responses": [
+        "Cette formation est ouverte aux étudiants ayant au moins le BAC 2 séries C, D, G2, G3. Les étudiants ayant le BAC 2 séries A pourront être autorisés sous réserve d’une note supérieure ou égale à 10/20 en mathématiques."
+      ]
+    },
+    {
+      "tag": "competences_attendues",
+      "patterns": [
+        "Compétences attendues après la LPCI",
+        "Que vais-je apprendre ?",
+        "Aptitudes à acquérir"
+      ],
+      "responses": [
+        "Le futur diplômé d’une Licence Professionnelle en Commerce International peut être employé dans des organisations commerciales internationales, dans des PME et Grandes Entreprises (industrielles, de distribution et de restauration, etc.).",
+        "Les compétences attendues incluent la gestion et le développement de portefeuilles clients sur le marché international, la gestion et le développement des produits sur le marché international, l'exportation et l'importation de produits, les prospections et les négociations commerciales à l'international, ainsi que la réalisation d'études de marché à l'étranger."
+      ]
+    },
+    {
+      "tag": "debouches",
+      "patterns": [
+        "Débouchés professionnels après la LPCI",
+        "Quels sont les métiers possibles ?",
+        "Que puis-je faire après cette formation ?"
+      ],
+      "responses": [
+        "Les diplômés de la LPCI peuvent exercer en tant que négociateurs internationaux, spécialistes d’achat et vente à l’international, chargés d’affaires export-import, chefs de produit international, chargés d’études commerciales au sein des organisations internationales, et bien plus encore.",
+        "Les opportunités professionnelles sont variées et dépendent des compétences acquises."
+      ]
+    },
+    {
+      "tag": "informations_formation",
+      "patterns": [
+        "Quelles sont les informations sur la formation en MI?",
+        "Dites-moi tout sur la formation MI.",
+        "Pouvez-vous m'en dire plus sur la Licence professionnelle en MI?"
+      ],
+      "responses": [
+        "La Licence professionnelle en Management International (MI) est une formation de 3 ans dans le domaine des Sciences Économiques et de Gestion. Elle comprend un tronc commun pendant les 4 premiers semestres, suivi d'une spécialisation en cours du soir pour les semestres 5 et 6."
+      ]
+    },
+    {
+      "tag": "conditions_admission",
+      "patterns": [
+        "Quelles sont les conditions d'admission pour la LPMI?",
+        "Qui peut s'inscrire à la LPMI?",
+        "Quel est le niveau d'études requis pour cette formation?"
+      ],
+      "responses": [
+        "La LPMI est ouverte aux étudiants ayant au moins le BAC 2 toutes séries ou tout diplôme équivalent."
+      ]
+    },
+    {
+      "tag": "competences_attendues",
+      "patterns": [
+        "Quelles compétences puis-je acquérir en suivant cetteformation?",
+        "Quel est l'objectif de la formation en MI?",
+        "Que vais-je apprendre en étudiant la LPMI?"
+      ],
+      "responses": [
+        "La formation en Management International vise à développer chez les étudiants des compétences en gestion, en commerce international et en langues étrangères.",
+        "Les étudiants acquièrent des compétences en gestion d'entreprise, en marketing international, en négociation commerciale internationale, en gestion des opérations internationales, en gestion financière internationale, en logistique internationale, ainsi qu'en communication interculturelle."
+      ]
+    },
+    {
+      "tag": "debouches",
+      "patterns": [
+        "Quels sont les débouchés professionnels après la LPMI?",
+        "Quels métiers puis-je exercer après la formation?",
+        "Quelles sont les opportunités professionnelles?"
+      ],
+      "responses": [
+        "Après avoir obtenu la Licence professionnelle en Management International, vous pouvez exercer diverses fonctions dans des entreprises internationales, des organisations internationales, des agences gouvernementales, des cabinets de conseil en commerce international, des institutions financières, et bien d'autres.",
+        "Vous pouvez travailler en tant que gestionnaire de projets internationaux, responsable export/import, responsable marketing international, analyste commercial international, consultant en commerce international, ou encore chef de produit international."
+      ]
+    },
+    {
+      "tag": "alternance_info",
+      "patterns": [
+        "Informations sur l'alternance en MI",
+        "Est-ce qu'il y a une option d'alternance pour la formation en MI?",
+        "Pouvez-vous me parler de l'alternance en LPMI?"
+      ],
+      "responses": [
+        "Oui, il est possible de suivre la Licence professionnelle en Management International en alternance. L'alternance permet aux étudiants de combiner des périodes de formation théorique à l'université et des périodes de travail en entreprise.",
+        "Cela leur donne l'occasion d'acquérir une expérience professionnelle concrète tout en poursuivant leurs études."
+      ]
+    },
+    {
+      "tag": "alternance_avantages",
+      "patterns": [
+        "Quels sont les avantages de l'alternance en MI?",
+        "Pourquoi choisir l'alternance pour la formation?",
+        "Quels sont les bénéfices de l'alternance en LPMI?"
+      ],
+      "responses": [
+        "L'alternance présente plusieurs avantages. Elle permet aux étudiants d'appliquer les connaissances acquises en cours dans un environnement professionnel réel.",
+        "Cela favorise l'acquisition de compétences pratiques et facilite l'insertion professionnelle après l'obtention du diplôme.",
+        "De plus, les étudiants en alternance reçoivent une rémunération de la part de l'entreprise qui les accueille, ce qui peut contribuer à financer leurs études."
+      ]
+    },
+    {
+      "tag": "alternance_conditions",
+      "patterns": [
+        "Quelles sont les conditions pour l'alternance en MI?",
+        "Quels sont les critères d'éligibilité pour l'alternance?",
+        "Comment postuler à l'alternance en LPMI?"
+      ],
+      "responses": [
+        "Les conditions pour l'alternance en Management International peuvent varier en fonction des établissements d'enseignement.",
+        "En général, les étudiants intéressés doivent être inscrits dans la formation et trouver une entreprise prête à les accueillir en tant qu'alternants.",
+        "Il est recommandé de contacter directement l'université ou l'établissement de formation pour obtenir des informations précises sur les critères d'éligibilité et la procédure de candidature à l'alternance."
+      ]
+    },
+    {
+      "tag": "alternance_duree",
+      "patterns": [
+        "Combien de temps dure l'alternance en MI?",
+        "Quelle est la durée de l'alternance en LPMI?",
+        "Pendant combien de temps suis-je en entreprise?"
+      ],
+      "responses": [
+        "La durée de l'alternance en Licence professionnelle en Management International peut varier selon les établissements et les programmes.",
+        "En général, les périodes en entreprise peuvent durer de quelques mois à un an, réparties sur les semestres prévus pour l'alternance.",
+        "Il est important de se renseigner auprès de l'établissement de formation pour obtenir des informations précises sur la durée de l'alternance."
+      ]
+    }
+  ],
+   "intents": [
+    {
+      "tag": "formation_info",
+      "patterns": [
+        "Informations sur la Licence Professionnelle en Finance Banque et Assurance",
+        "Détails de la LPFBA",
+        "Que puis-je savoir sur la formation en Finance Banque et Assurance ?"
+      ],
+      "responses": [
+        "La Licence Professionnelle en Finance Banque et Assurance (LPFBA) à l'ESGIS est une formation de 6 semestres (3 ans) dans le domaine des Sciences Economiques et de Gestion.",
+        "La formation comprend des cours en tronc commun pour les semestres 1 à 4 en présentiel, et des cours de spécialisation pour les semestres 5 et 6 en présentiel et en ligne.",
+        "Un stage obligatoire d'au moins deux mois est requis aux semestres 5 et 6, suivi de la rédaction et de la présentation d'un rapport.",
+        "Les objectifs de la formation incluent l'acquisition de compétences directement opérationnelles dans les emplois des secteurs bancaires, financiers et des assurances, ainsi que la capacité à élaborer et à traiter les informations financières et bancaires, et à gérer les opérations de base en assurance."
+      ]
+    },
+    {
+      "tag": "profil_entree",
+      "patterns": [
+        "Profil d'entrée pour la LPFBA",
+        "Conditions d'admission",
+        "Qui peut s'inscrire ?"
+      ],
+      "responses": [
+        "Cette formation est ouverte aux étudiants ayant au moins le BAC 2 séries C, D, G2."
+      ]
+    },
+    {
+      "tag": "competences_attendues",
+      "patterns": [
+        "Compétences attendues après la LPFBA",
+        "Que vais-je apprendre ?",
+        "Aptitudes à acquérir"
+      ],
+      "responses": [
+        "Les titulaires d'une licence Professionnelle en Finance Banque et Assurance vont naturellement vers les Banques, les établissements de change et de crédit, les institutions de micro finance, les établissements boursiers et les compagnies d'assurance.",
+        "Les compétences attendues incluent la capacité à appliquer les techniques bancaires, financières et d'assurance, à gérer une trésorerie, à construire un plan de financement, à gérer un portefeuille client, à utiliser les outils de gestion bancaire et financière, ainsi qu'à informer et communiquer sur les produits et services financiers."
+      ]
+    },
+    {
+      "tag": "debouches",
+      "patterns": [
+        "Débouchés professionnels après la LPFBA",
+        "Quels sont les métiers possibles ?",
+        "Que puis-je faire après cette formation ?"
+      ],
+      "responses": [
+        "La LPFBA offre de nombreux emplois accessibles, tels que trésorier ou caissier, agent de crédit, financier, gestionnaire des produits d'assurance, banquier, agent commercial d'assurances, etc.",
+        "Les opportunités professionnelles sont variées et dépendent des compétences acquises."
+      ]
+    }
+  ],
+  "intents": [
+    {
+      "tag": "formation_info",
+      "patterns": [
+        "Informations sur la formation en Développement d'Application",
+        "Détails de la LPDA",
+        "Que puis-je savoir sur la Licence Professionnelle en Développement d'Application ?"
+      ],
+      "responses": [
+        "La Licence Professionnelle en Développement d'Application (LPDA) à l'ESGIS est une formation de 6 semestres (3 ans) dans le domaine de l'Informatique.",
+        "La formation comprend des cours en tronc commun pour les semestres 1 à 4 en présentiel, et des cours de spécialisation pour les semestres 5 et 6 en présentiel et en ligne.",
+        "Un stage obligatoire d'au moins deux mois est requis aux semestres 5 et 6, suivi de la rédaction et de la présentation d'unrapport.",
+        "Les objectifs de la formation incluent l'acquisition de compétences en développement d'applications, gestion de bases de données, gestion de projets informatiques, et bien plus encore."
+      ]
+    },
+    {
+      "tag": "profil_entree",
+      "patterns": [
+        "Profil d'entrée pour la LPDA",
+        "Conditions d'admission",
+        "Qui peut s'inscrire ?"
+      ],
+      "responses": [
+        "Cette formation est ouverte aux candidats titulaires des baccalauréats II séries C, D, E, F2 et F3 ou tout titre équivalent et ayant de bonnes aptitudes en mathématiques et en physique."
+      ]
+    },
+    {
+      "tag": "competences_attendues",
+      "patterns": [
+        "Compétences attendues après la LPDA",
+        "Que vais-je apprendre ?",
+        "Aptitudes à acquérir"
+      ],
+      "responses": [
+        "La LPDA permet aux futurs diplômés d'acquérir des compétences en développement d'applications, tests de logiciels, utilisation de patrons d'architecture, gestion de projets informatiques, et bien plus encore.",
+        "Les diplômés seront capables de concevoir et développer des applications et sites web, administrer des applications et des bases de données, faire de la maintenance logicielle, gérer des projets informatiques, et bien plus encore."
+      ]
+    },
+    {
+      "tag": "debouches",
+      "patterns": [
+        "Débouchés professionnels après la LPDA",
+        "Quels sont les métiers possibles ?",
+        "Que puis-je faire après cette formation ?"
+      ],
+      "responses": [
+        "Les diplômés en LPDA peuvent viser des métiers tels que développeur d'applications, administrateur de base de données pour une PME/PMI, chef de projet en conception et administration de serveurs d'applications, technico-commercial, et bien plus encore.",
+        "Les opportunités professionnelles sont variées et dépendent des compétences acquises."
+      ]
+    }
+  ],
+  "intents": [
       {
-        "tag": "formation_info",
+        "tag": "informations_formation",
         "patterns": [
-          "Informations sur la formation en Commerce International",
-          "Détails de la LPCI",
-          "Que puis-je savoir sur la Licence Professionnelle en Commerce International ?"
+          "Quelles sont les informations sur la formation en OGRH?",
+          "Dites-moi tout sur la formation OGRH.",
+          "Pouvez-vous m'en dire plus sur la Licence professionnelle en OGRH?"
         ],
         "responses": [
-          "La Licence Professionnelle en Commerce International (LPCI) à l'ESGIS est une formation de 6 semestres (3 ans) dans le domaine de la Gestion.",
-          "La formation comprend des cours en tronc commun pour les semestres 1 à 4 en présentiel, et des cours de spécialisation pour les semestres 5 et 6 en présentiel et en ligne.",
-          "Un stage obligatoire d'au moins deux mois est requis aux semestres 5 et 6, suivi de la rédaction et de la présentation d'un rapport.",
-          "Les objectifs de la formation incluent la capacité à mener des opérations de prospection et de vente à l'étranger, assurer le suivi administratif des opérations internationales et gérer les relations commerciales en langues étrangères."
+          "La Licence professionnelle en Organisation et Gestion des Ressources Humaines (OGRH) est une formation de 3 ans dans le domaine des Sciences Économiques et de Gestion. Elle comprend un tronc commun pendant les 4 premiers semestres, suivi d'une spécialisation en cours du soir pour les semestres 5 et 6."
         ]
       },
       {
-        "tag": "profil_entree",
+        "tag": "conditions_admission",
         "patterns": [
-          "Profil d'entrée pour la LPCI",
-          "Conditions d'admission",
-          "Qui peut s'inscrire ?"
+          "Quelles sont les conditions d'admission pour la LP-OGRH?",
+          "Qui peut s'inscrire à la LP-OGRH?",
+          "Quel est le niveau d'études requis pour cette formation?"
         ],
         "responses": [
-          "Cette formation est ouverte aux étudiants ayant au moins le BAC 2 séries C, D, G2, G3. Les étudiants ayant le BAC 2 séries A pourront être autorisés sous réserve d’une note supérieure ou égale à 10/20 en mathématiques."
+          "Cette formation est ouverte aux étudiants ayant au moins le BAC 2 séries C, D, G2, G3 ou tout diplôme équivalent. Les étudiants ayant le BAC 2 séries A pourront être autorisés sous réserve d'une note supérieure ou égale à 10/20 en mathématiques au BAC 1 et au BAC 2."
         ]
       },
       {
         "tag": "competences_attendues",
         "patterns": [
-          "Compétences attendues après la LPCI",
-          "Que vais-je apprendre ?",
-          "Aptitudes à acquérir"
+          "Quelles compétences puis-je acquérir en suivant cette formation?",
+          "À quoi puis-je m'attendre à apprendre dans le programme OGRH?",
+          "Quelles sont les compétences attendues d'un diplômé en Organisation et Gestion des Ressources Humaines?"
         ],
         "responses": [
-          "Le futur diplômé d’une Licence Professionnelle en Commerce International peut être employé dans des organisations commerciales internationales, dans des PME et Grandes Entreprises (industrielles, de distribution et de restauration, etc.).",
-          "Les compétences attendues incluent la gestion et le développement de portefeuilles clients sur le marché international, la gestion et le développement des produits sur le marché international, l'exportation et l'importation de produits, les prospections et les négociations commerciales à l'international, ainsi que la réalisation d'études de marché à l'étranger."
+          "Un diplômé de Licence en Organisation et Gestion des Ressources Humaines (OGRH) doit maîtriser l’élaboration d’une fiche de paie, l’utilisation d’un logiciel de paie, l’établissement d’une fiche de poste et d’une annonce de recrutement, le management et l’animation d’équipes, la gestion du personnel au quotidien, les outils principaux de la gestion des carrières, les outils de gestion des coûts de la masse salariale."
         ]
       },
       {
-        "tag": "debouches",
+        "tag": "debouches_professionnels",
         "patterns": [
-          "Débouchés professionnels après la LPCI",
-          "Quels sont les métiers possibles ?",
-          "Que puis-je faire après cette formation ?"
+          "Quels sont les débouchés professionnels après avoir obtenu cette licence?",
+          "Quel genre de carrière puis-je envisager avec un diplôme en OGRH?",
+          "Où pourrais-je travailler après avoir terminé cette formation?"
         ],
         "responses": [
-          "Les diplômés de la LPCI peuvent exercer en tant que négociateurs internationaux, spécialistes d’achat et vente à l’international, chargés d’affaires export-import, chefs de produit international, chargés d’études commerciales au sein des organisations internationales, et bien plus encore.",
-          "Les opportunités professionnelles sont variées et dépendent des compétences acquises."
+          "Tout titulaire d’une LP-OGRH peut exercer en tant qu'Assistant en ressources humaines, Chargé de gestion de ressources humaines, Chargé de recrutement, Chargé de la rémunération, Chargé des relations sociales, Chargé des relations interpersonnelles, etc."
+        ]
+      },
+      {
+        "tag": "dates_importantes",
+        "patterns": [
+          "Quand commencent les inscriptions pour la LP-OGRH?",
+          "Quand débutent les cours pour la formation en OGRH?",
+          "Pouvez-vous me donner les dates clés pour cette formation?"
+        ],
+        "responses": [
+          "Les inscriptions débutent en août 2023, et les enseignements commencent en octobre 2023."
+        ]
+      },
+      {
+        "tag": "informations_contact",
+        "patterns": [
+          "Comment puis-je vous contacter pour obtenir plus d'informations?",
+          "Quelle est votre adresse e-mail?",
+          "Pouvez-vous me donner vos coordonnées?"
+        ],
+        "responses": [
+          "Vous pouvez nous contacter à l'adresse e-mail esgis.togo@esgis.org. Pour plus d'informations, vous pouvez également visiter notre site web : http://www.esgis.org."
+        ]
+      },
+      {
+        "tag": "frais_scolarite",
+        "patterns": [
+          "Combien coûte la formation en OGRH?",
+          "Quels sont les frais d'inscription pour la Licence professionnelle?",
+          "Pouvez-vous me donner des détails sur les frais de scolarité?"
+        ],
+        "responses": [
+          "Les frais d'inscription sont de 50 000 F CFA par an. Les frais de scolarité varient en fonction de l'année d'études : 400 000 F CFA pour la 1ère année, 500 000 F CFA pour la 2ème année, et 600 000 F CFA pour la 3ème année."
         ]
       }
-    ]
-  }
+    ],
+   "intents": [
+      {
+        "tag": "informations_formation",
+        "patterns": [
+          "Quelles sont les informations sur la formation en GCM?",
+          "Dites-moi tout sur la formation GCM.",
+          "Pouvez-vous m'en dire plus sur la Licence professionnelle en GCM?"
+        ],
+        "responses": [
+          "La Licence professionnelle en Gestion Commerciale et Marketing (GCM) est une formation de 3 ans dans le domaine des Sciences Économiques et de Gestion. Elle comprend un tronc commun pendant les 4 premiers semestres, suivi d'une spécialisation en cours du soir pour les semestres 5 et 6."
+        ]
+      },
+      {
+        "tag": "conditions_admission",
+        "patterns": [
+          "Quelles sont les conditions d'admission pour la LPGCM?",
+          "Qui peut s'inscrire à la LPGCM?",
+          "Quel est le niveau d'études requis pour cette formation?"
+        ],
+        "responses": [
+          "La LPGCM est ouverte aux étudiants ayant au moins le BAC 2 dans les séries C, D, G2, G3. Les étudiants avec un BAC 2 en série A peuvent être autorisés sous réserve d'une note égale ou supérieure à 10/20 en mathématiques au BAC 1 et au BAC 2."
+        ]
+      },
+      {
+        "tag": "competences_attendues",
+        "patterns": [
+          "Quelles compétences puis-je acquérir en suivant cette formation?",
+          "À quoi puis-je m'attendre à apprendre dans le programme GCM?",
+          "Quelles sont les compétences attendues d'un diplômé en Gestion Commerciale et Marketing?"
+        ],
+        "responses": [
+          "Les compétences attendues d'un diplômé de la LPGCM incluent la gestion des entreprises, la gestion spécialisée d'activités tertiaires, l'analyse du marché de l'entreprise, la prospection et la négociation, la gestion des portefeuilles produits, ainsi que la gestion des approvisionnements."
+        ]
+      },
+      {
+        "tag": "debouches_professionnels",
+        "patterns": [
+          "Quels sont les débouchés professionnels après avoir obtenu cette licence?",
+          "Quel genre de carrière puis-je envisager avec un diplôme en GCM?",
+          "Où pourrais-je travailler après avoir terminé cette formation?"
+        ],
+        "responses": [
+          "Après avoir obtenu la LPGCM, vous pouvez exercer en tant que Business developer, Gestionnaire de la clientèle junior, Gestion de la Force de Vente (FDV), Vendeur, Négociateur des affaires, Technico-commercial, Chargé des approvisionnements, et bien d'autres encore."
+        ]
+      },
+      {
+        "tag": "dates_importantes",
+        "patterns": [
+          "Quand commencent les inscriptions pour la LPGCM?",
+          "Quand débutent les cours pour la formation en GCM?",
+          "Pouvez-vous me donner les dates clés pour cette formation?"
+        ],
+        "responses": [
+          "Les inscriptions débutent en août 2023, et les enseignements commencent en octobre 2023."
+        ]
+      },
+      {
+        "tag": "informations_contact",
+        "patterns": [
+          "Comment puis-je vous contacter pour obtenir plus d'informations?",
+          "Quelle est votre adresse e-mail?",
+          "Pouvez-vous me donner vos coordonnées?"
+        ],
+        "responses": [
+          "Vous pouvez nous contacter à l'adresse e-mail esgis.togo@esgis.org. Pour plus d'informations, vous pouvez également visiter notre site web : http://www.esgis.org."
+        ]
+      },
+      {
+        "tag": "frais_scolarite",
+        "patterns": [
+          "Combien coûte la formation en GCM?",
+          "Quels sont les frais d'inscription pour la Licence professionnelle?",
+          "Pouvez-vous me donner des détails sur les frais de scolarité?"
+        ],
+        "responses": [
+          "Les frais d'inscription sont de 50 000 F CFA par an. Les frais de scolarité varient en fonction de l'année d'études : 400 000 F CFA pour la 1ère année, 500 000 F CFA pour la 2ème année, et 600 000 F CFA pour la 3ème année."
+        ]
+      }
+    ],
+ "intents": [
+    {
+      "tag": "informations_formation",
+      "patterns": [
+        "Quelles sont les informations sur la formation en TSL?",
+        "Dites-moi tout sur la formation Transport et Services Logistiques (TSL).",
+        "Pouvez-vous m'en dire plus sur la Licence professionnelle en TSL?"
+      ],
+      "responses": [
+        "La Licence professionnelle en Transport et Services Logistiques (LPTSL) est une formation de 3 ans dans le domaine des Sciences Économiques et de Gestion. Elle comprend un tronc commun pendant les 4 premiers semestres, suivi d'une spécialisation en cours du soir pour les semestres 5 et 6."
+      ]
+    },
+    {
+      "tag": "conditions_admission",
+      "patterns": [
+        "Quelles sont les conditions d'admission pour la LP-TSL?",
+        "Qui peut s'inscrire à la LP-TSL?",
+        "Quel est le niveau d'études requis pour cette formation?"
+      ],
+      "responses": [
+        "Cette formation professionnalisante est ouverte aux étudiants ayant au moins le BAC 2 séries C, D, G2, G3 ou tout diplôme équivalent. Les étudiants ayant le BAC 2 série A pourront être autorisés sous réserve d'une note supérieure ou égale à 10/20 en mathématiques au BAC 1 et au BAC 2."
+      ]
+    },
+    {
+      "tag": "competences_attendues",
+      "patterns": [
+        "Quelles compétences puis-je acquérir en suivant cette formation?",
+        "À quoi puis-je m'attendre à apprendre dans le programme TSL?",
+        "Quelles sont les compétences attendues d'un diplômé en Transport et Services Logistiques?"
+      ],
+      "responses": [
+        "Le diplômé d’une La licence Professionnelle en Transport et Services Logistiques doit être capable de planifier la gestion des flux physiques, des documents douaniers et juridiques, des systèmes d’information, manager le transport maritime, aérien, fluvial, routier, gérer les entrepôts, organiser et gérer le transport des marchandises, optimiser les coûts liés aux prestations de services logistiques."
+      ]
+    },
+    {
+      "tag": "debouches_professionnels",
+      "patterns": [
+        "Quels sont les débouchés professionnels après avoir obtenu cette licence?",
+        "Quel genre de carrière puis-je envisager avec un diplôme en TSL?",
+        "Où pourrais-je travailler après avoir terminé cette formation?"
+      ],
+      "responses": [
+        "Le diplômé de la licence Professionnelle en Transport et Services Logistiques (LPTSL) peut exercer en tant que chef magasinier, responsable d’entrepôt, logisticien, transporteur de marchandises et de personnes, responsable d’exploitation transport, gestionnaire des flux de distribution, responsable d’exploitation de transport, etc."
+      ]
+    },
+    {
+      "tag": "dates_importantes",
+      "patterns": [
+        "Quand commencent les inscriptions pour la LP-TSL?",
+        "Quand débutent les cours pour la formation en TSL?",
+        "Pouvez-vous me donner les dates clés pour cette formation?"
+      ],
+      "responses": [
+        "Les inscriptions débutent en août 2023, et les enseignements commencent en octobre 2023."
+      ]
+    },
+    {
+      "tag": "informations_contact",
+      "patterns": [
+        "Comment puis-je vous contacter pour obtenir plus d'informations?",
+        "Quelle est votre adresse e-mail?",
+        "Pouvez-vous me donner vos coordonnées?"
+      ],
+      "responses": [
+        "Vous pouvez nous contacter à l'adresse e-mail esgis.togo@esgis.org. Pour plus d'informations, vous pouvez également visiter notre site web : http://www.esgis.org."
+      ]
+    },
+    {
+      "tag": "frais_scolarite",
+      "patterns": [
+        "Combien coûte la formation en TSL?",
+        "Quels sont les frais d'inscription pour la Licence professionnelle?",
+        "Pouvez-vous me donner des détails sur les frais de scolarité?"
+      ],
+      "responses": [
+        "Les frais d'inscription sont de 50 000 F CFA par an. Les frais de scolarité varient en fonction de l'année d'études : 400 000 FCFA pour la 1ère année, 500 000 F CFA pour la 2ème année, et 600 000 F CFA pour la 3ème année."
+      ]
+    }
+  ]
+
+}

@@ -58,7 +58,7 @@ def get_response_for_intent(intent_tag: str, intents: dict) -> str | None:
 
 
 def get_closest_match(user_input: str, patterns: list) -> str | None:
-    close_match = get_close_matches(user_input, patterns, n=1, cutoff=0.8, dictionary=patterns)
+    close_match = get_close_matches(user_input, patterns, n=1, cutoff=0.8)
     if close_match:
         return close_match[0]
     else:
@@ -116,7 +116,8 @@ def chat_bot():
                 intent_tag = "custom_intent"
                 intents["intents"].append({"tag": intent_tag, "patterns": [user_input], "responses": [new_answer]})
                 save_intents('intents.json', intents)
-                print('Bot: Merci ! J\'ai appris une nouvelle réponse !')
+                print('Bot: Merci ! J\'ai appris une nouvelle réponse')
+
 
 
 
