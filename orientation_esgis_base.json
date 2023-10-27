@@ -1,0 +1,62 @@
+{
+  "questions": [
+    {
+      "question": "Quelle est la plus grande plan\u00c3\u00a8te du syst\u00c3\u00a8me solaire?",
+      "answers": [
+        "Jupiter",
+        "Mars",
+        "Saturne",
+        "V\u00c3\u00a9nus"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Quel est le plus haut sommet du monde?",
+      "answers": [
+        "Mont Kilimandjaro",
+        "Mont Everest",
+        "Mont McKinley",
+        "Mont Blanc"
+      ],
+      "correctAnswer": 1
+    },
+    {
+      "question": "Quelle est la capitale de l'Espagne?",
+      "answers": [
+        "Lisbonne",
+        "Barcelone",
+        "S\u00c3\u00a9ville",
+        "Madrid"
+      ],
+      "correctAnswer": 3
+    },
+    {
+      "question": "Qui a \u00c3\u00a9crit 'Romeo et Juliette'?",
+      "answers": [
+        "William Shakespeare",
+        "Charles Dickens",
+        "Jane Austen",
+        "Mark Twain"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "Quel est l'\u00c3\u00a9l\u00c3\u00a9ment le plus abondant dans l'univers?",
+      "answers": [
+        "Hydrog\u00c3\u00a8ne",
+        "Oxyg\u00c3\u00a8ne",
+        "Fer",
+        "Carbone"
+      ],
+      "correctAnswer": 0
+    },
+    {
+      "question": "plan\u00e8te",
+      "answers": "mars"
+    },
+    {
+      "question": "quel est le ",
+      "answers": "quel est le plus bas sommet "
+    }
+  ]
+}
