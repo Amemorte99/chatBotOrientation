@@ -1,0 +1,116 @@
+{
+  "intents": [
+    {
+      "tag": "formation_info",
+      "patterns": [
+        "Informations sur la formation en Commerce International",
+        "D\u00c3\u00a9tails de la LPCI",
+        "Que puis-je savoir sur la Licence Professionnelle en Commerce International ?"
+      ],
+      "responses": [
+        "La Licence Professionnelle en Commerce International (LPCI) \u00c3\u00a0 l'ESGIS est une formation de 6 semestres (3 ans) dans le domaine de la Gestion.",
+        "La formation comprend des cours en tronc commun pour les semestres 1 \u00c3\u00a0 4 en pr\u00c3\u00a9sentiel, et des cours de sp\u00c3\u00a9cialisation pour les semestres 5 et 6 en pr\u00c3\u00a9sentiel et en ligne.",
+        "Un stage obligatoire d'au moins deux mois est requis aux semestres 5 et 6, suivi de la r\u00c3\u00a9daction et de la pr\u00c3\u00a9sentation d'un rapport.",
+        "Les objectifs de la formation incluent la capacit\u00c3\u00a9 \u00c3\u00a0 mener des op\u00c3\u00a9rations de prospection et de vente \u00c3\u00a0 l'\u00c3\u00a9tranger, assurer le suivi administratif des op\u00c3\u00a9rations internationales et g\u00c3\u00a9rer les relations commerciales en langues \u00c3\u00a9trang\u00c3\u00a8res."
+      ]
+    },
+    {
+      "tag": "profil_entree",
+      "patterns": [
+        "Profil d'entr\u00c3\u00a9e pour la LPCI",
+        "Conditions d'admission",
+        "Qui peut s'inscrire ?"
+      ],
+      "responses": [
+        "Cette formation est ouverte aux \u00c3\u00a9tudiants ayant au moins le BAC 2 s\u00c3\u00a9ries C, D, G2, G3. Les \u00c3\u00a9tudiants ayant le BAC 2 s\u00c3\u00a9ries A pourront \u00c3\u00aatre autoris\u00c3\u00a9s sous r\u00c3\u00a9serve d\u00e2\u20ac\u2122une note sup\u00c3\u00a9rieure ou \u00c3\u00a9gale \u00c3\u00a0 10/20 en math\u00c3\u00a9matiques."
+      ]
+    },
+    {
+      "tag": "competences_attendues",
+      "patterns": [
+        "Comp\u00c3\u00a9tences attendues apr\u00c3\u00a8s la LPCI",
+        "Que vais-je apprendre ?",
+        "Aptitudes \u00c3\u00a0 acqu\u00c3\u00a9rir"
+      ],
+      "responses": [
+        "Le futur dipl\u00c3\u00b4m\u00c3\u00a9 d\u00e2\u20ac\u2122une Licence Professionnelle en Commerce International peut \u00c3\u00aatre employ\u00c3\u00a9 dans des organisations commerciales internationales, dans des PME et Grandes Entreprises (industrielles, de distribution et de restauration, etc.).",
+        "Les comp\u00c3\u00a9tences attendues incluent la gestion et le d\u00c3\u00a9veloppement de portefeuilles clients sur le march\u00c3\u00a9 international, la gestion et le d\u00c3\u00a9veloppement des produits sur le march\u00c3\u00a9 international, l'exportation et l'importation de produits, les prospections et les n\u00c3\u00a9gociations commerciales \u00c3\u00a0 l'international, ainsi que la r\u00c3\u00a9alisation d'\u00c3\u00a9tudes de march\u00c3\u00a9 \u00c3\u00a0 l'\u00c3\u00a9tranger."
+      ]
+    },
+    {
+      "tag": "debouches",
+      "patterns": [
+        "D\u00c3\u00a9bouch\u00c3\u00a9s professionnels apr\u00c3\u00a8s la LPCI",
+        "Quels sont les m\u00c3\u00a9tiers possibles ?",
+        "Que puis-je faire apr\u00c3\u00a8s cette formation ?"
+      ],
+      "responses": [
+        "Les dipl\u00c3\u00b4m\u00c3\u00a9s de la LPCI peuvent exercer en tant que n\u00c3\u00a9gociateurs internationaux, sp\u00c3\u00a9cialistes d\u00e2\u20ac\u2122achat et vente \u00c3\u00a0 l\u00e2\u20ac\u2122international, charg\u00c3\u00a9s d\u00e2\u20ac\u2122affaires export-import, chefs de produit international, charg\u00c3\u00a9s d\u00e2\u20ac\u2122\u00c3\u00a9tudes commerciales au sein des organisations internationales, et bien plus encore.",
+        "Les opportunit\u00c3\u00a9s professionnelles sont vari\u00c3\u00a9es et d\u00c3\u00a9pendent des comp\u00c3\u00a9tences acquises."
+      ]
+    },
+    {
+      "tag": "custom_intent",
+      "patterns": [
+        "from __future__ import annotations"
+      ],
+      "responses": [
+        ""
+      ]
+    },
+    {
+      "tag": "custom_intent",
+      "patterns": [
+        "import nltk"
+      ],
+      "responses": [
+        "import json"
+      ]
+    },
+    {
+      "tag": "custom_intent",
+      "patterns": [
+        "from difflib import get_close_matches"
+      ],
+      "responses": [
+        "from nltk.tokenize import word_tokenize"
+      ]
+    },
+    {
+      "tag": "custom_intent",
+      "patterns": [
+        "from nltk.corpus import stopwords"
+      ],
+      "responses": [
+        "from nltk.stem import WordNetLemmatizer"
+      ]
+    },
+    {
+      "tag": "custom_intent",
+      "patterns": [
+        "from nltk.tag import pos_tag"
+      ],
+      "responses": [
+        "from nltk.chunk import ne_chunk"
+      ]
+    },
+    {
+      "tag": "custom_intent",
+      "patterns": [
+        ""
+      ],
+      "responses": [
+        "nltk.download('punkt')  # T\u00e9l\u00e9charge les mod\u00e8les tokenizer"
+      ]
+    },
+    {
+      "tag": "custom_intent",
+      "patterns": [
+        "nltk.download('stopwords')"
+      ],
+      "responses": [
+        "nltk.download('wordnet')"
+      ]
+    }
+  ]
+}

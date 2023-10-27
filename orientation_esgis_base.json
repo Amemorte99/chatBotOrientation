@@ -1,62 +1,53 @@
 {
-  "questions": [
-    {
-      "question": "Quelle est la plus grande plan\u00c3\u00a8te du syst\u00c3\u00a8me solaire?",
-      "answers": [
-        "Jupiter",
-        "Mars",
-        "Saturne",
-        "V\u00c3\u00a9nus"
-      ],
-      "correctAnswer": 0
-    },
-    {
-      "question": "Quel est le plus haut sommet du monde?",
-      "answers": [
-        "Mont Kilimandjaro",
-        "Mont Everest",
-        "Mont McKinley",
-        "Mont Blanc"
-      ],
-      "correctAnswer": 1
-    },
-    {
-      "question": "Quelle est la capitale de l'Espagne?",
-      "answers": [
-        "Lisbonne",
-        "Barcelone",
-        "S\u00c3\u00a9ville",
-        "Madrid"
-      ],
-      "correctAnswer": 3
-    },
-    {
-      "question": "Qui a \u00c3\u00a9crit 'Romeo et Juliette'?",
-      "answers": [
-        "William Shakespeare",
-        "Charles Dickens",
-        "Jane Austen",
-        "Mark Twain"
-      ],
-      "correctAnswer": 0
-    },
-    {
-      "question": "Quel est l'\u00c3\u00a9l\u00c3\u00a9ment le plus abondant dans l'univers?",
-      "answers": [
-        "Hydrog\u00c3\u00a8ne",
-        "Oxyg\u00c3\u00a8ne",
-        "Fer",
-        "Carbone"
-      ],
-      "correctAnswer": 0
-    },
-    {
-      "question": "plan\u00e8te",
-      "answers": "mars"
-    },
-    {
-      "question": "quel est le ",
-      "answers": "quel est le plus bas sommet "
-    }
-  ]
-}
+    "intents": [
+      {
+        "tag": "formation_info",
+        "patterns": [
+          "Informations sur la formation en Commerce International",
+          "Détails de la LPCI",
+          "Que puis-je savoir sur la Licence Professionnelle en Commerce International ?"
+        ],
+        "responses": [
+          "La Licence Professionnelle en Commerce International (LPCI) à l'ESGIS est une formation de 6 semestres (3 ans) dans le domaine de la Gestion.",
+          "La formation comprend des cours en tronc commun pour les semestres 1 à 4 en présentiel, et des cours de spécialisation pour les semestres 5 et 6 en présentiel et en ligne.",
+          "Un stage obligatoire d'au moins deux mois est requis aux semestres 5 et 6, suivi de la rédaction et de la présentation d'un rapport.",
+          "Les objectifs de la formation incluent la capacité à mener des opérations de prospection et de vente à l'étranger, assurer le suivi administratif des opérations internationales et gérer les relations commerciales en langues étrangères."
+        ]
+      },
+      {
+        "tag": "profil_entree",
+        "patterns": [
+          "Profil d'entrée pour la LPCI",
+          "Conditions d'admission",
+          "Qui peut s'inscrire ?"
+        ],
+        "responses": [
+          "Cette formation est ouverte aux étudiants ayant au moins le BAC 2 séries C, D, G2, G3. Les étudiants ayant le BAC 2 séries A pourront être autorisés sous réserve d’une note supérieure ou égale à 10/20 en mathématiques."
+        ]
+      },
+      {
+        "tag": "competences_attendues",
+        "patterns": [
+          "Compétences attendues après la LPCI",
+          "Que vais-je apprendre ?",
+          "Aptitudes à acquérir"
+        ],
+        "responses": [
+          "Le futur diplômé d’une Licence Professionnelle en Commerce International peut être employé dans des organisations commerciales internationales, dans des PME et Grandes Entreprises (industrielles, de distribution et de restauration, etc.).",
+          "Les compétences attendues incluent la gestion et le développement de portefeuilles clients sur le marché international, la gestion et le développement des produits sur le marché international, l'exportation et l'importation de produits, les prospections et les négociations commerciales à l'international, ainsi que la réalisation d'études de marché à l'étranger."
+        ]
+      },
+      {
+        "tag": "debouches",
+        "patterns": [
+          "Débouchés professionnels après la LPCI",
+          "Quels sont les métiers possibles ?",
+          "Que puis-je faire après cette formation ?"
+        ],
+        "responses": [
+          "Les diplômés de la LPCI peuvent exercer en tant que négociateurs internationaux, spécialistes d’achat et vente à l’international, chargés d’affaires export-import, chefs de produit international, chargés d’études commerciales au sein des organisations internationales, et bien plus encore.",
+          "Les opportunités professionnelles sont variées et dépendent des compétences acquises."
+        ]
+      }
+    ]
+  }
