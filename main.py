@@ -92,11 +92,17 @@ def chat_bot():
             best_match = get_closest_match(user_input, [p for intent in intents["intents"] for p in intent["patterns"]])
 
         if best_match:
-            intent_tag = [intent["tag"] for intent in intents["intents"] if best_match in intent["patterns"]][0]
-            responses = get_response_for_intent(intent_tag, intents)
-            if responses:
-                response = responses[0]  # Choix de la première réponse pour simplifier
-                print(f'Bot: {response}')
+            matching_intents = [intent for intent in intents["intents"] if best_match in intent["patterns"]]
+            if matching_intents:
+                responses = []
+                for intent in matching_intents:
+                    response = get_response_for_intent(intent["tag"], intents)
+                    if response:
+                        responses.extend(response)
+                if responses:
+                    print("Bot:")
+                    for response in responses:
+                        print(f"- {response}")
         else:
             named_entities = extract_named_entities(user_input)
             if named_entities:
