@@ -6,11 +6,15 @@ from difflib import get_close_matches
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
+from nltk.tag import pos_tag
+from nltk.chunk import ne_chunk
 
 nltk.download('punkt')  # Télécharge les modèles tokenizer
-nltk.download('averaged_perceptron_tagger')  # Télécharge les modèles POS tagger
 nltk.download('stopwords')
 nltk.download('wordnet')
+nltk.download('averaged_perceptron_tagger')
+nltk.download('maxent_ne_chunker')
+nltk.download('words')
 
 
 def load_knowledge_base(file_path: str) -> dict:
@@ -62,6 +66,17 @@ def get_closest_match(user_input: str, questions: list) -> str | None:
         return None
 
 
+def extract_named_entities(text: str) -> list:
+    tagged_tokens = pos_tag(word_tokenize(text))
+    named_entities = ne_chunk(tagged_tokens)
+    entities = []
+    for subtree in named_entities.subtrees():
+        if subtree.label() == 'NE':
+            entity = ' '.join(word for word, tag in subtree.leaves())
+            entities.append(entity)
+    return entities
+
+
 def chat_bot():
     print(nltk.__version__)
     knowledge_base: dict = load_knowledge_base('orientation_esgis_base.json')
@@ -81,7 +96,11 @@ def chat_bot():
             answer: str = get_answer_for_question(best_match, knowledge_base)
             print(f'Bot: {answer}')
         else:
-            print('Bot: Je ne connais pas la réponse. Pouvez-vous m \'apprendre ?')
+            named_entities = extract_named_entities(user_input)
+            if named_entities:
+                print(f'Bot: Je vois que vous parlez de {", ".join(named_entities)}. Pouvez-vous fournir plus de détails ?')
+            else:
+                print('Bot: Je ne connais pas la réponse. Pouvez-vous m\'apprendre ?')
             new_answer: str = input('Tapez la réponse ou "Skip" pour passer : ')
 
             if new_answer.lower() != 'skip':
