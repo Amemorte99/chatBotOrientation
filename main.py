@@ -106,7 +106,7 @@ def chat_bot():
         else:
             named_entities = extract_named_entities(user_input)
             if named_entities:
-                print(f'Bot: Je vois que vous parlez de {", ".join(named_entities)}. Pouvez-vous fournir plus de détails ?')
+                print(f'Bot: Je vois que vous parlez de {", ".join(named_entities)}. Pouvez-vous fournir plus de détails  ?')
             else:
                 print('Bot: Je ne connais pas la réponse. Pouvez-vous m\'apprendre ?')
             new_answer: str = input('Tapez la réponse ou "Skip" pour passer : ')
