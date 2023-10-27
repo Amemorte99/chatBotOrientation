@@ -1,6 +1,7 @@
 {
-  "intents": [
-    {
+
+   "intents": [
+         {
       "tag": "formation_info",
       "patterns": [
         "Informations sur la formation en Commerce International",
@@ -145,9 +146,7 @@
         "En général, les périodes en entreprise peuvent durer de quelques mois à un an, réparties sur les semestres prévus pour l'alternance.",
         "Il est important de se renseigner auprès de l'établissement de formation pour obtenir des informations précises sur la durée de l'alternance."
       ]
-    }
-  ],
-   "intents": [
+    },
     {
       "tag": "formation_info",
       "patterns": [
@@ -196,10 +195,8 @@
         "La LPFBA offre de nombreux emplois accessibles, tels que trésorier ou caissier, agent de crédit, financier, gestionnaire des produits d'assurance, banquier, agent commercial d'assurances, etc.",
         "Les opportunités professionnelles sont variées et dépendent des compétences acquises."
       ]
-    }
-  ],
-  "intents": [
-    {
+    },
+       {
       "tag": "formation_info",
       "patterns": [
         "Informations sur la formation en Développement d'Application",
@@ -247,10 +244,8 @@
         "Les diplômés en LPDA peuvent viser des métiers tels que développeur d'applications, administrateur de base de données pour une PME/PMI, chef de projet en conception et administration de serveurs d'applications, technico-commercial, et bien plus encore.",
         "Les opportunités professionnelles sont variées et dépendent des compétences acquises."
       ]
-    }
-  ],
-  "intents": [
-      {
+    },
+       {
         "tag": "informations_formation",
         "patterns": [
           "Quelles sont les informations sur la formation en OGRH?",
@@ -326,10 +321,8 @@
         "responses": [
           "Les frais d'inscription sont de 50 000 F CFA par an. Les frais de scolarité varient en fonction de l'année d'études : 400 000 F CFA pour la 1ère année, 500 000 F CFA pour la 2ème année, et 600 000 F CFA pour la 3ème année."
         ]
-      }
-    ],
-   "intents": [
-      {
+      },
+     {
         "tag": "informations_formation",
         "patterns": [
           "Quelles sont les informations sur la formation en GCM?",
@@ -405,10 +398,8 @@
         "responses": [
           "Les frais d'inscription sont de 50 000 F CFA par an. Les frais de scolarité varient en fonction de l'année d'études : 400 000 F CFA pour la 1ère année, 500 000 F CFA pour la 2ème année, et 600 000 F CFA pour la 3ème année."
         ]
-      }
-    ],
- "intents": [
-    {
+      },
+       {
       "tag": "informations_formation",
       "patterns": [
         "Quelles sont les informations sur la formation en TSL?",
@@ -486,5 +477,6 @@
       ]
     }
   ]
+
 
 }
