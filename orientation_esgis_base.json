@@ -39,7 +39,7 @@
         "Cette formation est ouverte aux étudiants ayant au moins le BAC 2 séries C, D, G2, G3. Les étudiants ayant le BAC 2 séries A pourront être autorisés sous réserve d’une note supérieure ou égale à 10/20 en mathématiques."
       ]
     },
-    {
+         {
       "tag": "competences_attendues",
       "patterns": [
         "Compétences attendues après la LPCI",
@@ -544,19 +544,6 @@
        "context_set": ""
      },
      {
-       "tag": "salutation",
-       "patterns": [
-         "Salut",
-         "Bonjour",
-         "Salutations",
-         "Coucou"
-       ],
-       "responses": [
-         "Bonjour ! Comment puis-je vous aider aujourd'hui ?"
-       ],
-       "context_set": ""
-     },
-     {
        "tag": "présentation",
        "patterns": [
          "Présentez l'ESGIS",
@@ -659,25 +646,6 @@
       ],
       "context_set": ""
     },
-            {
-          "tag": "salutation",
-          "patterns": [
-             "Salut",
-             "Comment ça va ?",
-             "Y a-t-il quelqu'un ici ?",
-             "Bonjour",
-             "ça va ?",
-             "Hey",
-             "Quoi de neuf ?",
-             "??? ??? ??"
-          ],
-          "responses": [
-             "Bonjour !",
-             "Content de te revoir !",
-             "Salut, comment puis-je t'aider ?"
-          ],
-          "context_set": ""
-       },
        {
           "tag": "au_revoir",
           "patterns": [
@@ -1086,6 +1054,7 @@
           ],
           "context_set": ""
        }
+
   ]
 
 
