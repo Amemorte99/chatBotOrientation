@@ -7,6 +7,8 @@ from keras.layers import LSTM, Dense, Embedding
 from keras.preprocessing.sequence import pad_sequences
 from keras.preprocessing.text import Tokenizer
 from keras import optimizers
+from keras.optimizers import Adam
+from keras.src.layers import Dropout
 from sklearn.preprocessing import LabelEncoder  # Import correct LabelEncoder
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
@@ -14,6 +16,8 @@ from nltk.stem import SnowballStemmer
 from nltk.tag import pos_tag
 from nltk.chunk import ne_chunk
 from difflib import get_close_matches
+from keras.utils import to_categorical
+
 
 nltk.download('punkt')
 nltk.download('stopwords')
@@ -61,7 +65,7 @@ def get_closest_match(user_input: str, patterns: list) -> str | None:
 
 
 def find_best_match(user_question: str, patterns: list) -> str | None:
-    stop_words = set(stopwords.words('english'))
+    stop_words = set(stopwords.words('french'))
     user_tokens = [stemmer.stem(token.lower()) for token in word_tokenize(user_question) if
                    token.lower() not in stop_words]
     best_match = None
@@ -121,19 +125,36 @@ def chat_bot():
     X = pad_sequences(sequences, padding='post', maxlen=max_sequence_length)
 
     # Définition de l'architecture du modèle
+    # model = Sequential()
+    # model.add(Embedding(input_dim=len(tokenizer.word_index) + 1, output_dim=128, input_length=max_sequence_length))
+    # model.add(LSTM(100))
+    # model.add(Dense(len(set(tags_encoded)), activation='softmax'))
+
+    label_encoder = LabelEncoder()
+    tags_encoded = label_encoder.fit_transform(tags)
+    tags_encoded = to_categorical(tags_encoded)  # Convert to one-hot encoding
+
+    # ... (No changes until model definition)
+
     model = Sequential()
-    model.add(Embedding(input_dim=len(tokenizer.word_index) + 1, output_dim=128, input_length=max_sequence_length))
-    model.add(LSTM(100))
-    model.add(Dense(len(set(tags_encoded)), activation='softmax'))
+    model.add(Dense(128, activation='relu', input_shape=(X.shape[1],)))
+    model.add(Dropout(0.5))
+    model.add(Dense(256, activation='relu'))
+    model.add(Dense(tags_encoded.shape[1], activation='softmax'))  # Using the second dimension of tags_encoded
 
     # Compilation du modèle
-    model.compile(optimizer=optimizers.Adam(), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+    model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 
-    # Conversion des tags encodés en un tableau numpy pour la compatibilité avec Keras
-    tags_encoded = np.array(tags_encoded)
+    # ... (No changes until the fit function)
+
+    # Conversion des tags encodés en un tableau numpy pour la compatibilité avec Keras est déjà faite
+    # Pas besoin de convertir encore une fois car `tags_encoded` est déjà un tableau numpy grâce à `to_categorical`
+
+
 
     # Entraînement du modèle
-    model.fit(X, tags_encoded, epochs=10)
+    model.fit(X, tags_encoded, epochs=100)
+
 
     try:
         while True:
@@ -148,7 +169,7 @@ def chat_bot():
             intent_index = np.argmax(intent_prediction)
             intent_tag = label_encoder.inverse_transform([intent_index])[0]
 
-            if intent_prediction[0][intent_index] < 0.5:
+            if intent_prediction[0][intent_index] < 0.8:
                 closest_match = get_closest_match(user_input, patterns)
                 if closest_match:
                     intent_tag = find_best_match(closest_match, patterns)

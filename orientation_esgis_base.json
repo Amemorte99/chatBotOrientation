@@ -1,6 +1,19 @@
 {
 
    "intents": [
+          {
+       "tag": "salutation",
+       "patterns": [
+         "Salut",
+         "Bonjour",
+         "Salutations",
+         "Coucou"
+       ],
+       "responses": [
+         "Bonjour ! Comment puis-je vous aider aujourd'hui ?"
+       ],
+       "context_set": ""
+     },
          {
       "tag": "formation_info",
       "patterns": [
@@ -476,20 +489,6 @@
         "Les frais d'inscription sont de 50 000 F CFA par an. Les frais de scolarité varient en fonction de l'année d'études : 400 000 FCFA pour la 1ère année, 500 000 F CFA pour la 2ème année, et 600 000 F CFA pour la 3ème année."
       ]
     },
-
-      {
-       "tag": "salutation",
-       "patterns": [
-         "Salut",
-         "Bonjour",
-         "Salutations",
-         "Coucou"
-       ],
-       "responses": [
-         "Bonjour ! Comment puis-je vous aider aujourd'hui ?"
-       ],
-       "context_set": ""
-     },
      {
        "tag": "présentation",
        "patterns": [
@@ -752,32 +751,6 @@
           "context_set": ""
        },
        {
-          "tag": "horaires",
-          "patterns": [
-             "Horaire de l'université",
-             "Quels sont les horaires de l'université ?",
-             "Jours de travail",
-             "Quand êtes-vous ouverts ?",
-             "Quels sont vos horaires ?",
-             "Heures d'ouverture",
-             "Quand l'université est-elle ouverte ?",
-             "Horaire de l'université",
-             "Qu'en est-il de l'horaire de l'université ?",
-             "L'université est-elle ouverte le samedi ?",
-             "Parle-moi de l'horaire de l'université",
-             "Quels sont les horaires de l'université ?",
-             "À quelle heure dois-je venir à l'université ?",
-             "Quand dois-je assister à l'université ?",
-             "Quel est mon horaire universitaire ?",
-             "Horaire de l'université",
-             "Horaire de l'université"
-          ],
-          "responses": [
-             "L'université est ouverte de 8h à 21h30 du lundi au samedi !"
-          ],
-          "context_set": ""
-       },
-       {
           "tag": "numéro",
           "patterns": [
              "Plus d'informations",
@@ -802,73 +775,6 @@
           "context_set": ""
        },
        {
-          "tag": "cours",
-          "patterns": [
-             "Liste des cours",
-             "Liste des cours proposés",
-             "Liste des cours proposés à l'université",
-             "Quels sont les cours proposés dans votre université ?",
-             "Cours ?",
-             "Cours proposés",
-             "Cours proposés à l'université (nom de votre université)",
-             "Cours que vous proposez",
-             "Branches ?",
-             "Cours disponibles à l'UNI ?",
-             "Branches disponibles à votre université ?",
-             "Quels sont les cours à l'UNI ?",
-             "Quelles sont les branches à l'UNI ?",
-             "Quels sont les cours à l'UNI ?",
-             "Branches disponibles à l'UNI ?",
-             "Pouvez-vous me dire quels sont les cours disponibles à l'UNI ?",
-             "Pouvez-vous me dire quelles sont les branches disponibles à l'UNI ?",
-             "Génie informatique ?",
-             "Informatique",
-             "Génie informatique ?",
-             "IT",
-             "Technologie de l'information",
-             "AI/ML",
-             "Génie mécanique",
-             "Génie chimique",
-             "Génie civil"
-          ],
-          "responses": [
-             "Notre université propose des formations en technologie de l'information, génie informatique, génie mécanique, génie chimique, génie civil et génie électrique."
-          ],
-          "context_set": ""
-       },
-       {
-          "tag": "frais",
-          "patterns": [
-             "Informations sur les frais",
-             "Informations sur les frais",
-             "Dites-moi les frais",
-             "Frais universitaires",
-             "Frais par semestre",
-             "Quels sont les frais de chaque semestre ?",
-             "Quels sont les frais de chaque année ?",
-             "Quels sont les frais ?",
-             "Quels sont les frais ?",
-             "Combien coûtent les frais ?",
-             "Frais de première année",
-             "Frais",
-             "À propos des frais",
-             "Dites-moi quelque chose sur les frais",
-             "Quels sont les frais de l'auberge ?",
-             "Combien coûtent les frais ?",
-             "Frais de l'auberge",
-             "Frais de la chambre AC",
-             "Frais de la chambre non-AC",
-             "Frais de la chambre AC pour les filles",
-             "Frais de la chambre non-AC pour les filles",
-             "Frais de la chambre AC pour les garçons",
-             "Frais de la chambre non-AC pour les garçons"
-          ],
-          "responses": [
-             "Pour plus de détails sur les frais, visitez <a target=\"_blank\" href=\"LIEN\">ici</a>"
-          ],
-          "context_set": ""
-       },
-       {
           "tag": "emplacement",
           "patterns": [
              "Où est située l'université",
@@ -887,34 +793,6 @@
           ],
           "responses": [
              "<a target=\"_blank\" href=\"LIEN GOOGLE MAP\">ici</a>"
-          ],
-          "context_set": ""
-       },
-       {
-          "tag": "auberge",
-          "patterns": [
-             "Installations de l'auberge",
-             "Service d'auberge",
-             "Emplacement de l'auberge",
-             "Adresse de l'auberge",
-             "Installations de l'auberge",
-             "Frais d'auberge",
-             "L'université propose-t-elle une auberge ?",
-             "Y a-t-il une auberge ?",
-             "Où est l'auberge ?",
-             "Avez-vous une auberge ?",
-             "Avez-vous une auberge ?",
-             "Auberge",
-             "Capacité de l'auberge",
-             "Quels sont les frais de l'auberge ?",
-             "Comment entrer dans l'auberge",
-             "Quelle est l'adresse de l'auberge",
-             "À quelle distance se trouve l'auberge de l'université",
-             "Distance entre l'université et l'auberge",
-             "Distance entre l'auberge et l'université"
-          ],
-          "responses": [
-             "Pour plus de détails sur l'auberge, visitez <a target=\"_blank\" href=\"LIEN DE DÉTAIL DE L'AUBERGE OU TOUT LIEN D'INFORMATION OU AJOUTEZ VOS PROPRES RÉPONSES\">ici</a>"
           ],
           "context_set": ""
        },
@@ -1059,7 +937,7 @@
              "Qu'y a-t-il à manger ?"
           ],
           "responses": [
-             "Nous servons Franky, Locho, Alu-puri, Kachori, Khavsa, Thaali et bien d'autres plats au menu."
+             "Nous servons arichot, aimolo, Riz tomate, kanami, thé, Lait glacé et bien d'autres plats au menu."
           ],
           "context_set": ""
        },
@@ -1153,46 +1031,6 @@
           ],
           "responses": [
              "Voici le calendrier académique <a target=\"_blank\" href=\"VOTRE CALENDRIER ACADÉMIQUE\">site web</a>"
-          ],
-          "context_set": ""
-       },
-       {
-          "tag": "admission",
-          "patterns": [
-             "Quel est le processus d'admission",
-             "Quel est le processus d'admission",
-             "Admission",
-             "Admissions ouvertes",
-             "Admissions",
-             "Comment puis-je être admis",
-             "Comment puis-je être admis à l'université",
-             "Procédure d'admission",
-             "Admission à l'université"
-          ],
-          "responses": [
-             "Pour plus d'informations sur le processus d'admission, visitez <a target=\"_blank\" href=\"LIEN DU PROCESSUS D'ADMISSION SUR LE SITE WEB DE VOTRE UNIVERSITÉ\">ici</a>"
-          ],
-          "context_set": ""
-       },
-       {
-          "tag": "département",
-          "patterns": [
-             "Départements de l'université",
-             "Liste des départements",
-             "Liste des départements de l'université",
-             "Liste des départements académiques",
-             "Liste des départements de l'université",
-             "Départements académiques",
-             "Branches académiques",
-             "Quels sont les départements à l'université",
-             "Liste des départements",
-             "Départements académiques de l'université",
-             "Liste des branches académiques",
-             "Liste des départements",
-             "Quels départements académiques avez-vous"
-          ],
-          "responses": [
-             "Notre université propose une gamme de départements académiques, notamment le génie informatique, le génie mécanique, le génie chimique, le génie civil, le génie électrique et bien d'autres. Vous pouvez en savoir plus sur nos départements sur le <a target=\"_blank\" href=\"LIEN VERS LES DÉPARTEMENTS DE L'UNIVERSITÉ\">site web</a> de l'université."
           ],
           "context_set": ""
        },
