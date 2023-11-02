@@ -82,116 +82,84 @@ def find_best_match(user_question: str, patterns: list) -> str | None:
 def get_response_for_intent(intent_tag: str, intents: dict) -> str | None:
     for intent in intents["intents"]:
         if intent["tag"] == intent_tag:
-            return intent["responses"]
+            return np.random.choice(intent["responses"])
+
+
 
 
 def chat_bot():
     intents = load_intents('orientation_esgis_base.json')
-    patterns = [pattern for intent in intents["intents"] for pattern in intent["patterns"]]
-    tags = [intent["tag"] for intent in intents["intents"]]
 
+    # Préparation des motifs et des tags pour l'entraînement
+    patterns = []
+    tags = []
+    for intent in intents["intents"]:
+        for pattern in intent["patterns"]:
+            patterns.append(pattern)
+            tags.append(intent["tag"])
+
+    # Création du tokenizer et conversion des motifs en séquences numériques
     tokenizer = Tokenizer()
     tokenizer.fit_on_texts(patterns)
     sequences = tokenizer.texts_to_sequences(patterns)
 
+    # Encodage des tags
     label_encoder = LabelEncoder()
     tags_encoded = label_encoder.fit_transform(tags)
 
-    max_sequence_length = 14
+    # Vérification de la correspondance entre les séquences et les tags encodés
+    print(f'Nombre de motifs: {len(patterns)}')
+    print(f'Nombre de tags: {len(tags)}')
+    print(f'Nombre de séquences: {len(sequences)}')
+    print(f'Nombre de tags encodés: {len(tags_encoded)}')
+
+    # S'assurer que le nombre de séquences et de tags encodés est le même
+    assert len(sequences) == len(tags_encoded), "Le nombre de séquences et de tags encodés ne correspond pas."
+
+    # Padding des séquences pour avoir une longueur uniforme
+    max_sequence_length = max([len(seq) for seq in sequences])  # Dynamiquement déterminé à partir des données
     X = pad_sequences(sequences, padding='post', maxlen=max_sequence_length)
 
+    # Définition de l'architecture du modèle
     model = Sequential()
     model.add(Embedding(input_dim=len(tokenizer.word_index) + 1, output_dim=128, input_length=max_sequence_length))
     model.add(LSTM(100))
     model.add(Dense(len(set(tags_encoded)), activation='softmax'))
 
+    # Compilation du modèle
     model.compile(optimizer=optimizers.Adam(), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
+
+    # Conversion des tags encodés en un tableau numpy pour la compatibilité avec Keras
+    tags_encoded = np.array(tags_encoded)
+
+    # Entraînement du modèle
     model.fit(X, tags_encoded, epochs=10)
 
-    while True:
-        user_input = input('Vous: ')
+    try:
+        while True:
+            user_input = input('Vous: ')
+            if user_input.lower() == 'quit':
+                break
 
-        if user_input.lower() == 'quit':
-            break
+            user_tokens = process_input(user_input)
+            user_input_sequence = pad_sequences(tokenizer.texts_to_sequences([user_tokens]), padding='post', maxlen=max_sequence_length)
 
-        user_tokens = process_input(user_input)
-        user_input_sequence = pad_sequences(tokenizer.texts_to_sequences([user_tokens]), padding='post',
-                                            maxlen=max_sequence_length)
+            intent_prediction = model.predict(user_input_sequence)
+            intent_index = np.argmax(intent_prediction)
+            intent_tag = label_encoder.inverse_transform([intent_index])[0]
 
-        intent_prediction = model.predict(user_input_sequence)
+            if intent_prediction[0][intent_index] < 0.5:
+                closest_match = get_closest_match(user_input, patterns)
+                if closest_match:
+                    intent_tag = find_best_match(closest_match, patterns)
 
-        intent_index = np.argmax(intent_prediction)
-        intent_tag = label_encoder.inverse_transform([intent_index])[0]
-
-        if intent_prediction[0][intent_index] < 0.5:
-            # Si l'intention prédite a une probabilité inférieure à 0.5, on recherche la correspondance la plus proche
-            closest_match = get_closest_match(user_input, patterns)
-            if closest_match:
-                intent_tag = find_best_match(closest_match, patterns)
-
-        if intent_tag:
             response = get_response_for_intent(intent_tag, intents)
             if response:
-                print("Assistant:", np.random.choice(response))
+                print("Assistant:", response)
             else:
                 print("Assistant: Je suis désolé, je ne peux pas répondre à cette question pour le moment.")
-        else:
-            print("Assistant: Je suis désolé, je ne comprends pas votre question.")
-
-def chat_bot():
-    intents = load_intents('orientation_esgis_base.json')
-    patterns = [pattern for intent in intents["intents"] for pattern in intent["patterns"]]
-    tags = [intent["tag"] for intent in intents["intents"]]
-
-    tokenizer = Tokenizer()
-    tokenizer.fit_on_texts(patterns)
-    sequences = tokenizer.texts_to_sequences(patterns)
-
-    label_encoder = LabelEncoder()
-    tags_encoded = label_encoder.fit_transform(tags)
-
-    max_sequence_length = 14
-    X = pad_sequences(sequences, padding='post', maxlen=max_sequence_length)
-
-    model = Sequential()
-    model.add(Embedding(input_dim=len(tokenizer.word_index) + 1, output_dim=128, input_length=max_sequence_length))
-    model.add(LSTM(100))
-    model.add(Dense(len(set(tags_encoded)), activation='softmax'))
-
-    model.compile(optimizer=optimizers.Adam(), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
-    model.fit(X, tags_encoded, epochs=10)
-
-    while True:
-        user_input = input('Vous: ')
-
-        if user_input.lower() == 'quit':
-            break
-
-        user_tokens = process_input(user_input)
-        user_input_sequence = pad_sequences(tokenizer.texts_to_sequences([user_tokens]), padding='post',
-                                            maxlen=max_sequence_length)
-
-        intent_prediction = model.predict(user_input_sequence)
-        intent_index = np.argmax(intent_prediction)
-        intent_tag = tags_encoded[intent_index]
-
-        if intent_prediction[0][intent_index] >= 0.5:
-            response = get_response_for_intent(intent_tag, intents)
-            print('Bot:', np.random.choice(response))
-        else:
-            named_entities = extract_named_entities(user_input)
-            if named_entities:
-                for entity in named_entities:
-                    closest_match = get_closest_match(entity, patterns)
-                    if closest_match:
-                        intent_tag = find_best_match(closest_match, patterns)
-                        if intent_tag:
-                            response = get_response_for_intent(intent_tag, intents)
-                            print('Bot:', np.random.choice(response))
-                            break
-            if not response:
-                print("Bot: Je suis désolé, je ne comprends pas. Pouvez-vous reformuler votre question ?")
-
+    except Exception as e:
+        print(f"Une erreur est survenue: {e}")
 
 if __name__ == '__main__':
     chat_bot()
