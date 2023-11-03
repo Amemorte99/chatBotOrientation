@@ -10,7 +10,6 @@ from nltk.stem import SnowballStemmer
 from nltk.tag import pos_tag
 from nltk.chunk import ne_chunk
 
-from main3 import call_second_chatbot
 
 nltk.download('punkt')  # Télécharge les modèles tokenizer
 nltk.download('stopwords')  # Télécharge les mots vides (stopwords) en français
@@ -126,4 +125,3 @@ def call_first_chatbot():
 
 if __name__ == '__main__':
     call_first_chatbot()
-    call_second_chatbot()
