@@ -1,13 +1,13 @@
 from __future__ import annotations
+
+import csv
 import json
-import nltk
-import numpy as np
+
 from keras.models import Sequential
 from keras.layers import LSTM, Dense, Embedding
 from keras.preprocessing.sequence import pad_sequences
 from keras.preprocessing.text import Tokenizer
-from keras import optimizers
-from keras.optimizers import Adam
+
 from keras.src.layers import Dropout
 from sklearn.preprocessing import LabelEncoder, OneHotEncoder  # Import correct LabelEncoder
 from nltk.tokenize import word_tokenize
@@ -94,7 +94,7 @@ def find_best_match(user_question: str, patterns: list) -> str | None:
         return None
 
 
-def get_response_for_intent(intent_tag: str, intents: dict) -> str | None:
+def get_response_for_intent2(intent_tag: str, intents: dict) -> str | None:
     for intent in intents["intents"]:
         if intent["tag"] == intent_tag:
             return np.random.choice(intent["responses"])
@@ -102,7 +102,7 @@ def get_response_for_intent(intent_tag: str, intents: dict) -> str | None:
 
 
 
-def chat_bot():
+def call_second_chatbot():
     # Chargement des données depuis un fichier CSV
     df = pd.read_csv('orientation_esgis_base.csv')
 
@@ -178,17 +178,31 @@ def chat_bot():
     except Exception as e:
         print(f"Une erreur est survenue: {e}")
 
-def get_response_for_intent(intent):
-    # Fonction fictive pour récupérer la réponse en fonction de l'intention
-    # Vous devez implémenter cette fonction pour correspondre à vos propres données et logique de réponse
-    if intent == 'greeting':
-        return 'Bonjour ! Comment puis-je vous aider ?'
-    elif intent == 'farewell':
-        return 'Au revoir ! À bientôt.'
-    elif intent == 'question':
-        return 'Je suis désolé, je ne peux pas répondre à cette question pour le moment.'
-    else:
-        return 'Je ne comprends pas. Pouvez-vous reformuler votre question ?'
+
+
+
+def load_intents_from_csv(file_path):
+    intents_dict = {}
+    with open(file_path, mode='r', encoding='utf-8') as csvfile:
+        csv_reader = csv.DictReader(csvfile)
+        for row in csv_reader:
+            tag = row['intents/tag']
+            responses = [response for key, response in row.items() if key.startswith('intents/responses/') and response != ""]
+            intents_dict[tag] = responses
+    return intents_dict
+
+
+
+# Emplacement de votre fichier CSV
+csv_file_path = 'orientation_esgis_base.csv'
+
+# Charger les intentions et les réponses du CSV
+intents_responses_dict = load_intents_from_csv(csv_file_path)
+
+# Exemple d'utilisation
+intent_to_find = "salutation"  # Ce serait l'intent détecté par votre système de NLP
+response = get_response_for_intent2(intent_to_find, intents_responses_dict)
+print(response)  # C
 
 if __name__ == '__main__':
-    chat_bot()
+    call_second_chatbot()

@@ -10,6 +10,8 @@ from nltk.stem import SnowballStemmer
 from nltk.tag import pos_tag
 from nltk.chunk import ne_chunk
 
+from main3 import call_second_chatbot
+
 nltk.download('punkt')  # Télécharge les modèles tokenizer
 nltk.download('stopwords')  # Télécharge les mots vides (stopwords) en français
 nltk.download('averaged_perceptron_tagger')  # Télécharge le modèle POS tagger
@@ -51,7 +53,7 @@ def find_best_match(user_question: str, patterns: list) -> str | None:
         return None
 
 
-def get_response_for_intent(intent_tag: str, intents: dict) -> str | None:
+def get_response_for_intent1(intent_tag: str, intents: dict) -> str | None:
     for intent in intents["intents"]:
         if intent["tag"] == intent_tag:
             return intent["responses"]
@@ -76,7 +78,7 @@ def extract_named_entities(text: str) -> list:
     return entities
 
 
-def chat_bot():
+def call_first_chatbot():
     print(nltk.__version__)
     intents: dict = load_intents('orientation_esgis_base.json')
 
@@ -96,7 +98,7 @@ def chat_bot():
             if matching_intents:
                 responses = []
                 for intent in matching_intents:
-                    response = get_response_for_intent(intent["tag"], intents)
+                    response = get_response_for_intent1(intent["tag"], intents)
                     if response:
                         responses.extend(response)
                 if responses:
@@ -123,4 +125,5 @@ def chat_bot():
 
 
 if __name__ == '__main__':
-    chat_bot()
+    call_first_chatbot()
+    call_second_chatbot()
