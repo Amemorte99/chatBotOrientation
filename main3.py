@@ -11,8 +11,6 @@ from sklearn.preprocessing import LabelEncoder
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import SnowballStemmer
-from nltk.tag import pos_tag
-from nltk.chunk import ne_chunk
 from difflib import get_close_matches
 
 # Téléchargement des ressources nécessaires de NLTK
@@ -43,7 +41,7 @@ def process_input(input_text: str) -> list[str]:
 
 # Extraction d'entités nommées
 def extract_named_entities(text: str) -> list[str]:
-    tagged_tokens = pos_tag(word_tokenize(text), lang='french')
+    tagged_tokens = pos_tag(word_tokenize(text), lang='french')  # NLTK ne prend pas en charge lang='french'
     named_entities = ne_chunk(tagged_tokens)
     entities = []
     for subtree in named_entities.subtrees():
@@ -79,7 +77,7 @@ def get_response_for_intent(intent_tag: str, intents: dict) -> str | None:
 
 # Définition et entraînement du modèle de chatbot
 def chat_bot():
-    intents = load_intents('orientation_esgis_base.json')
+    intents = load_intents('orientation_esgis_base.json')  # Mise à jour du chemin d'accès pour charger le fichier JSON
     patterns, tags = [], []
     for intent in intents["intents"]:
         for pattern in intent["patterns"]:
@@ -104,7 +102,7 @@ def chat_bot():
     model.add(Dense(tags_encoded.shape[1], activation='softmax'))
 
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
-    model.fit(X, tags_encoded, epochs=100)
+    model.fit(X, tags_encoded, epochs=5000)
 
     try:
         while True:
