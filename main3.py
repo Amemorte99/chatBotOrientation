@@ -119,5 +119,7 @@ def chat_bot():
     except Exception as e:
         print(f"Une erreur est survenue: {e}")
 
+
+
 if __name__ == '__main__':
     chat_bot()
