@@ -7,6 +7,7 @@ from keras.layers import Dense, Embedding, LSTM, Dropout
 from keras.preprocessing.sequence import pad_sequences
 from keras.preprocessing.text import Tokenizer
 from keras.utils import to_categorical
+from nltk import pos_tag, ne_chunk
 from sklearn.preprocessing import LabelEncoder
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
