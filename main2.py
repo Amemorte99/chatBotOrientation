@@ -1,5 +1,5 @@
 # Fonction pour le premier chatbot
-from main import get_response_for_intent1, load_intents
+from principaleChat import get_response_for_intent1, load_intents
 from main3 import get_response_for_intent2
 
 
