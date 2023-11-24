@@ -18,7 +18,10 @@ nltk.download('maxent_ne_chunker')  # Télécharge le modèle de Named Entity Re
 nltk.download('words')  # Télécharge les mots communs en anglais (nécessaire pour le POS tagger)
 
 stemmer = SnowballStemmer('french')
+from flask import Flask, request, jsonify
+import nltk
 
+app = Flask(__name__)
 
 def load_intents(file_path: str) -> dict:
     with open(file_path, 'r', encoding='utf-8') as file:
@@ -77,51 +80,44 @@ def extract_named_entities(text: str) -> list:
     return entities
 
 
+
+
+# Chargez vos intentions ici, si nécessaire
+intents = load_intents('orientation_esgis_base.json')
+
+@app.route('/chat', methods=['POST'])
 def call_first_chatbot():
-    print(nltk.__version__)
-    intents: dict = load_intents('orientation_esgis_base.json')
+    user_input = request.json.get('message')
 
-    while True:
-        user_input: str = input('Vous: ')
+    if not user_input:
+        return jsonify({'error': 'No message provided'}), 400
 
-        if user_input.lower() == 'quit':
-            break
+    if user_input.lower() == 'quit':
+        return jsonify({'response': 'Chatbot session ended'}), 200
 
-        best_match: str | None = find_best_match(user_input, [p for intent in intents["intents"] for p in intent["patterns"]])
+    best_match = find_best_match(user_input, [p for intent in intents["intents"] for p in intent["patterns"]])
 
-        if not best_match:
-            best_match = get_closest_match(user_input, [p for intent in intents["intents"] for p in intent["patterns"]])
+    if not best_match:
+        best_match = get_closest_match(user_input, [p for intent in intents["intents"] for p in intent["patterns"]])
 
-        if best_match:
-            matching_intents = [intent for intent in intents["intents"] if best_match in intent["patterns"]]
-            if matching_intents:
-                responses = []
-                for intent in matching_intents:
-                    response = get_response_for_intent1(intent["tag"], intents)
-                    if response:
-                        responses.extend(response)
-                if responses:
-                    print("Bot:")
-                    for response in responses:
-                        print(f"- {response}")
+    responses = []
+    if best_match:
+        matching_intents = [intent for intent in intents["intents"] if best_match in intent["patterns"]]
+        for intent in matching_intents:
+            response = get_response_for_intent1(intent["tag"], intents)
+            if response:
+                print(f"- {response}")
+                responses.extend(response)
+    else:
+        named_entities = extract_named_entities(user_input)
+        if named_entities:
+            return jsonify({
+                               'response': f'Je vois que vous parlez de {", ".join(named_entities)}. Pouvez-vous fournir plus de détails ?'})
         else:
-            named_entities = extract_named_entities(user_input)
-            if named_entities:
-                print(f'Bot: Je vois que vous parlez de {", ".join(named_entities)}. Pouvez-vous fournir plus de détails  ?')
-            else:
-                print('Bot: Je ne connais pas la réponse. Pouvez-vous m\'apprendre ?')
-            new_answer: str = input('Tapez la réponse ou "Skip" pour passer : ')
+            return jsonify({'response': 'Je ne connais pas la réponse. Pouvez-vous m\'apprendre ?'})
 
-            if new_answer.lower() != 'skip':
-                # Ajouter la nouvelle intention au JSON
-                intent_tag = "custom_intent"
-                intents["intents"].append({"tag": intent_tag, "patterns": [user_input], "responses": [new_answer]})
-                save_intents('intents.json', intents)
-                print('Bot: Merci ! J\'ai appris une nouvelle réponse')
-
-
-
+    return jsonify({'responses': responses})
 
 
 if __name__ == '__main__':
-    call_first_chatbot()
+    app.run(debug=True)

@@ -77,8 +77,8 @@ def get_response_for_intent(intent_tag: str, intents: dict) -> str | None:
             return np.random.choice(intent["responses"])
 
 # Définition et entraînement du modèle de chatbot
-def chat_bot():
-    intents = load_intents('orientation_esgis_base.json')  # Mise à jour du chemin d'accès pour charger le fichier JSON
+def call_second_chatbot():
+    intents = load_intents('orientation_esgis_base2.json')  # Mise à jour du chemin d'accès pour charger le fichier JSON
     patterns, tags = [], []
     for intent in intents["intents"]:
         for pattern in intent["patterns"]:
@@ -103,7 +103,7 @@ def chat_bot():
     model.add(Dense(tags_encoded.shape[1], activation='softmax'))
 
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
-    model.fit(X, tags_encoded, epochs=5000)
+    model.fit(X, tags_encoded, epochs=1000)
 
     try:
         while True:
@@ -123,4 +123,4 @@ def chat_bot():
 
 
 if __name__ == '__main__':
-    chat_bot()
+    call_second_chatbot()
