@@ -1,3 +1,4 @@
+from flask_cors import CORS
 from flask import Flask, request, jsonify
 from contextlib import redirect_stdout
 import io
@@ -6,6 +7,7 @@ from chatIA import call_second_chatbot
 from principaleChat import call_first_chatbot
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route('/chat_bot', methods=['POST'])
 def chat():

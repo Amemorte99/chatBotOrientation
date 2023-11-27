@@ -106,7 +106,7 @@ def call_first_chatbot():
         for intent in matching_intents:
             response = get_response_for_intent1(intent["tag"], intents)
             if response:
-                print(f"- {response}")
+                print(f" {response}")
                 responses.extend(response)
     else:
         named_entities = extract_named_entities(user_input)
