@@ -21,7 +21,9 @@
         "Détails de la LPCI",
         "Que puis-je savoir sur la Licence Professionnelle en Commerce International ?",
         "LPCI",
-        "Commerce International"
+        "Commerce International",
+        "Licence en Commerce International",
+        "CI "
       ],
       "responses": [
         "La Licence Professionnelle en Commerce International (LPCI) à l'ESGIS est une formation de 6 semestres (3 ans) dans le domaine de la Gestion.",
@@ -35,7 +37,12 @@
       "patterns": [
         "Profil d'entrée pour la LPCI",
         "Conditions d'admission",
-        "Qui peut s'inscrire ?"
+        "Qui peut s'inscrire ?",
+        "Qui peut s'inscrire à la LPCI ?",
+        "Conditions d'admission à la LPCI",
+        "Conditions d'admission pour la LPCI",
+        "Conditions d'admission pour la Licence Professionnelle en Commerce International",
+        "Conditions d'admission pour la CI"
       ],
       "responses": [
         "Cette formation est ouverte aux étudiants ayant au moins le BAC 2 séries C, D, G2, G3. Les étudiants ayant le BAC 2 séries A pourront être autorisés sous réserve d’une note supérieure ou égale à 10/20 en mathématiques."
@@ -46,7 +53,12 @@
       "patterns": [
         "Compétences attendues après la LPCI",
         "Que vais-je apprendre ?",
-        "Aptitudes à acquérir"
+        "Aptitudes à acquérir",
+        "Aptitudes à apprendre",
+        "Aptitudes à apprendre à la LPCI",
+        "Aptitudes à apprendre à la Licence Professionnelle en Commerce International",
+        "Aptitudes à apprendre à  en Commerce International",
+        "Aptitudes à apprendre à la CI"
       ],
       "responses": [
         "Le futur diplômé d’une Licence Professionnelle en Commerce International peut être employé dans des organisations commerciales internationales, dans des PME et Grandes Entreprises (industrielles, de distribution et de restauration, etc.).",
@@ -58,7 +70,13 @@
       "patterns": [
         "Débouchés professionnels après la LPCI",
         "Quels sont les métiers possibles ?",
-        "Que puis-je faire après cette formation ?"
+        "Que puis-je faire après cette formation ?",
+        "Quels sont les metiers à apprendre à la LPCI ?",
+        "Quels sont les metiers à apprendre à la Licence Professionnelle en Commerce International ?",
+        "Quels sont les metiers à apprendre à la LPCI ?",
+        "Quels sont les metiers à apprendre    en Commerce International ?",
+        "Quels sont les metiers à apprendre à la CI ?"
+
       ],
       "responses": [
         "Les diplômés de la LPCI peuvent exercer en tant que négociateurs internationaux, spécialistes d’achat et vente à l’international, chargés d’affaires export-import, chefs de produit international, chargés d’études commerciales au sein des organisations internationales, et bien plus encore.",
@@ -70,7 +88,11 @@
       "patterns": [
         "Quelles sont les informations sur la formation en MI?",
         "Dites-moi tout sur la formation MI.",
-        "Pouvez-vous m'en dire plus sur la Licence professionnelle en MI?"
+        "Pouvez-vous m'en dire plus sur la Licence professionnelle en MI?",
+        "Dites-moi tout sur la Licence professionnelle en MI.",
+        "MI",
+        "Licence professionnelle en Management International",
+        "LPMI"
       ],
       "responses": [
         "La Licence professionnelle en Management International (MI) est une formation de 3 ans dans le domaine des Sciences Économiques et de Gestion. Elle comprend un tronc commun pendant les 4 premiers semestres, suivi d'une spécialisation en cours du soir pour les semestres 5 et 6."
@@ -81,7 +103,11 @@
       "patterns": [
         "Quelles sont les conditions d'admission pour la LPMI?",
         "Qui peut s'inscrire à la LPMI?",
+        "Conditions d'admission pour la LPMI?",
+         "Conditions d'admission pour la MI?",
+        "Conditions d'admission pour la Licence professionnelle en Management International?",
         "Quel est le niveau d'études requis pour cette formation?"
+
       ],
       "responses": [
         "La LPMI est ouverte aux étudiants ayant au moins le BAC 2 toutes séries ou tout diplôme équivalent."
@@ -92,7 +118,11 @@
       "patterns": [
         "Quelles compétences puis-je acquérir en suivant cetteformation?",
         "Quel est l'objectif de la formation en MI?",
-        "Que vais-je apprendre en étudiant la LPMI?"
+        "Que vais-je apprendre en étudiant la LPMI?",
+         "Que vais-je apprendre en étudiant la MI?",
+        "Aptitudes à apprendre à la LPMI?",
+        "Aptitudes à apprendre à la Licence professionnelle en Management International?"
+
       ],
       "responses": [
         "La formation en Management International vise à développer chez les étudiants des compétences en gestion, en commerce international et en langues étrangères.",
@@ -104,7 +134,10 @@
       "patterns": [
         "Quels sont les débouchés professionnels après la LPMI?",
         "Quels métiers puis-je exercer après la formation?",
-        "Quelles sont les opportunités professionnelles?"
+        "Quelles sont les opportunités professionnelles?",
+        "Quels sont les metiers à apprendre à la LPMI?",
+         "Quels sont les metiers à apprendre à la MI?",
+        "Quels sont les metiers à apprendre à la Licence professionnelle en Management International?"
       ],
       "responses": [
         "Après avoir obtenu la Licence professionnelle en Management International, vous pouvez exercer diverses fonctions dans des entreprises internationales, des organisations internationales, des agences gouvernementales, des cabinets de conseil en commerce international, des institutions financières, et bien d'autres.",
@@ -116,7 +149,9 @@
       "patterns": [
         "Informations sur l'alternance en MI",
         "Est-ce qu'il y a une option d'alternance pour la formation en MI?",
-        "Pouvez-vous me parler de l'alternance en LPMI?"
+        "Pouvez-vous me parler de l'alternance en LPMI?",
+         "Pouvez-vous me parler de l'alternance en MI?",
+        "Pouvez-vous m'en dire plus sur l'alternance en LPMI?"
       ],
       "responses": [
         "Oui, il est possible de suivre la Licence professionnelle en Management International en alternance. L'alternance permet aux étudiants de combiner des périodes de formation théorique à l'université et des périodes de travail en entreprise.",
@@ -128,7 +163,10 @@
       "patterns": [
         "Quels sont les avantages de l'alternance en MI?",
         "Pourquoi choisir l'alternance pour la formation?",
-        "Quels sont les bénéfices de l'alternance en LPMI?"
+        "Quels sont les bénéfices de l'alternance en LPMI?",
+         "Quels sont les bénéfices de l'alternance en MI?",
+        "Pourquoi choisir l'alternance pour la Licence professionnelle en Management International?"
+
       ],
       "responses": [
         "L'alternance présente plusieurs avantages. Elle permet aux étudiants d'appliquer les connaissances acquises en cours dans un environnement professionnel réel.",
@@ -141,7 +179,9 @@
       "patterns": [
         "Quelles sont les conditions pour l'alternance en MI?",
         "Quels sont les critères d'éligibilité pour l'alternance?",
-        "Comment postuler à l'alternance en LPMI?"
+        "Comment postuler à l'alternance en LPMI?",
+         "Comment postuler à l'alternance en MI?",
+        "Comment postuler à l'alternance en Licence professionnelle en Management International?"
       ],
       "responses": [
         "Les conditions pour l'alternance en Management International peuvent varier en fonction des établissements d'enseignement.",
@@ -154,7 +194,9 @@
       "patterns": [
         "Combien de temps dure l'alternance en MI?",
         "Quelle est la durée de l'alternance en LPMI?",
-        "Pendant combien de temps suis-je en entreprise?"
+        "Pendant combien de temps suis-je en entreprise?",
+        "Quelle est la durée de l'alternance en MI?",
+        "Quelle est la durée de l'alternance en Licence professionnelle en Management International?"
       ],
       "responses": [
         "La durée de l'alternance en Licence professionnelle en Management International peut varier selon les établissements et les programmes.",
@@ -167,7 +209,11 @@
       "patterns": [
         "Informations sur la Licence Professionnelle en Finance Banque et Assurance",
         "Détails de la LPFBA",
-        "Que puis-je savoir sur la formation en Finance Banque et Assurance ?"
+        "Que puis-je savoir sur la formation en Finance Banque et Assurance ?",
+        "Détails de la formation en Finance Banque et Assurance",
+        "Informations sur la formation en Finance Banque et Assurance",
+        "FBA",
+        "LPFBA"
       ],
       "responses": [
         "La Licence Professionnelle en Finance Banque et Assurance (LPFBA) à l'ESGIS est une formation de 6 semestres (3 ans) dans le domaine des Sciences Economiques et de Gestion.",
@@ -180,8 +226,9 @@
       "tag": "profil_entree",
       "patterns": [
         "Profil d'entrée pour la LPFBA",
-        "Conditions d'admission",
-        "Qui peut s'inscrire ?"
+        "Conditions d'admission LPFBA",
+        "Qui peut s'inscrire ? LPFBA",
+        "Conditions d'admission LPFBA"
       ],
       "responses": [
         "Cette formation est ouverte aux étudiants ayant au moins le BAC 2 séries C, D, G2."
@@ -204,7 +251,11 @@
       "patterns": [
         "Débouchés professionnels après la LPFBA",
         "Quels sont les métiers possibles ?",
-        "Que puis-je faire après cette formation ?"
+        "Que puis-je faire après cette formation ?",
+        "Quels sont les emplois accessibles ?",
+        "Quels sont les emplois accessibles à cette formation ?",
+        "Quels sont les emplois accessibles à la formation ?",
+        "Quels sont les emplois accessibles à la LPFBA ?"
       ],
       "responses": [
         "La LPFBA offre de nombreux emplois accessibles, tels que trésorier ou caissier, agent de crédit, financier, gestionnaire des produits d'assurance, banquier, agent commercial d'assurances, etc.",
@@ -216,7 +267,12 @@
       "patterns": [
         "Informations sur la formation en Développement d'Application",
         "Détails de la LPDA",
-        "Que puis-je savoir sur la Licence Professionnelle en Développement d'Application ?"
+        "Détails de la formation en Développement d'Application",
+        "Détails de la DA",
+        "Que puis-je savoir sur la Licence Professionnelle en Développement d'Application ?",
+        "Détails de la Licence Professionnelle en Développement d'Application",
+        "Détails de la Licence Professionnelle en DA"
+
       ],
       "responses": [
         "La Licence Professionnelle en Développement d'Application (LPDA) à l'ESGIS est une formation de 6 semestres (3 ans) dans le domaine de l'Informatique.",
@@ -230,7 +286,9 @@
       "patterns": [
         "Profil d'entrée pour la LPDA",
         "Conditions d'admission",
-        "Qui peut s'inscrire ?"
+        "Qui peut s'inscrire à LPDA?",
+        "Conditions d'admission LPDA",
+        "Conditions d'admission DA"
       ],
       "responses": [
         "Cette formation est ouverte aux candidats titulaires des baccalauréats II séries C, D, E, F2 et F3 ou tout titre équivalent et ayant de bonnes aptitudes en mathématiques et en physique."
@@ -241,7 +299,8 @@
       "patterns": [
         "Compétences attendues après la LPDA",
         "Que vais-je apprendre ?",
-        "Aptitudes à acquérir"
+        "Aptitudes à acquérir",
+        "Aptitudes à accomplir LPDA"
       ],
       "responses": [
         "La LPDA permet aux futurs diplômés d'acquérir des compétences en développement d'applications, tests de logiciels, utilisation de patrons d'architecture, gestion de projets informatiques, et bien plus encore.",
