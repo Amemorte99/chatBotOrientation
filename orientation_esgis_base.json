@@ -312,7 +312,9 @@
       "patterns": [
         "Débouchés professionnels après la LPDA",
         "Quels sont les métiers possibles ?",
-        "Que puis-je faire après cette formation ?"
+        "Que puis-je faire après cette formation ?",
+        "Quels sont les emplois accessibles ?",
+        "Quels sont les emplois accessibles à cette formation ?"
       ],
       "responses": [
         "Les diplômés en LPDA peuvent viser des métiers tels que développeur d'applications, administrateur de base de données pour une PME/PMI, chef de projet en conception et administration de serveurs d'applications, technico-commercial, et bien plus encore.",
@@ -324,7 +326,15 @@
         "patterns": [
           "Quelles sont les informations sur la formation en OGRH?",
           "Dites-moi tout sur la formation OGRH.",
-          "Pouvez-vous m'en dire plus sur la Licence professionnelle en OGRH?"
+          "Pouvez-vous m'en dire plus sur la Licence professionnelle en OGRH?",
+          "Dites-moi tout sur la Licence professionnelle en OGRH",
+          "Pouvez-vous m'en dire plus sur la LP-OGRH?",
+          "Dites-moi tout sur la LP-OGRH",
+          "Pouvez-vous m'en dire plus sur la Licence professionnelle en Organisation et Gestion des Ressources Humaines?",
+          "Dites-moi tout sur la Licence professionnelle en Organisation et Gestion des Ressources Humaines",
+          "ORGH",
+          "LP-OGRH"
+
         ],
         "responses": [
           "La Licence professionnelle en Organisation et Gestion des Ressources Humaines (OGRH) est une formation de 3 ans dans le domaine des Sciences Économiques et de Gestion. Elle comprend un tronc commun pendant les 4 premiers semestres, suivi d'une spécialisation en cours du soir pour les semestres 5 et 6."
@@ -335,7 +345,10 @@
         "patterns": [
           "Quelles sont les conditions d'admission pour la LP-OGRH?",
           "Qui peut s'inscrire à la LP-OGRH?",
-          "Quel est le niveau d'études requis pour cette formation?"
+          "Quel est le niveau d'études requis pour cette formation?",
+          "Quel est le niveau d'études requis pour la LP-OGRH?",
+          "Quel est le niveau d'études requis pour la licence professionnelle en Organisation et Gestion des Ressources Humaines?",
+          "Quel est le niveau d'études requis pour la licence professionnelle en OGRH?"
         ],
         "responses": [
           "Cette formation est ouverte aux étudiants ayant au moins le BAC 2 séries C, D, G2, G3 ou tout diplôme équivalent. Les étudiants ayant le BAC 2 séries A pourront être autorisés sous réserve d'une note supérieure ou égale à 10/20 en mathématiques au BAC 1 et au BAC 2."
@@ -357,7 +370,8 @@
         "patterns": [
           "Quels sont les débouchés professionnels après avoir obtenu cette licence?",
           "Quel genre de carrière puis-je envisager avec un diplôme en OGRH?",
-          "Où pourrais-je travailler après avoir terminé cette formation?"
+          "Où pourrais-je travailler après avoir terminé cette formation?",
+          "Quels sont les débouchés professionnels pour avoir obtenu cette formation?"
         ],
         "responses": [
           "Tout titulaire d’une LP-OGRH peut exercer en tant qu'Assistant en ressources humaines, Chargé de gestion de ressources humaines, Chargé de recrutement, Chargé de la rémunération, Chargé des relations sociales, Chargé des relations interpersonnelles, etc."
@@ -368,7 +382,8 @@
         "patterns": [
           "Quand commencent les inscriptions pour la LP-OGRH?",
           "Quand débutent les cours pour la formation en OGRH?",
-          "Pouvez-vous me donner les dates clés pour cette formation?"
+          "Pouvez-vous me donner les dates clés pour cette formation?",
+          "Quand commencent les inscriptions pour la licence professionnelle en Organisation et Gestion des Ressources Humaines?"
         ],
         "responses": [
           "Les inscriptions débutent en août 2023, et les enseignements commencent en octobre 2023."
@@ -379,7 +394,8 @@
         "patterns": [
           "Comment puis-je vous contacter pour obtenir plus d'informations?",
           "Quelle est votre adresse e-mail?",
-          "Pouvez-vous me donner vos coordonnées?"
+          "Pouvez-vous me donner vos coordonnées?",
+          "Comment puis-je vous contacter pour avoir plus d'informations?"
         ],
         "responses": [
           "Vous pouvez nous contacter à l'adresse e-mail esgis.togo@esgis.org. Pour plus d'informations, vous pouvez également visiter notre site web : http://www.esgis.org."
@@ -390,7 +406,8 @@
         "patterns": [
           "Combien coûte la formation en OGRH?",
           "Quels sont les frais d'inscription pour la Licence professionnelle?",
-          "Pouvez-vous me donner des détails sur les frais de scolarité?"
+          "Pouvez-vous me donner des détails sur les frais de scolarité?",
+          "Combien coûte la formation en Organisation et Gestion des Ressources Humaines?"
         ],
         "responses": [
           "Les frais d'inscription sont de 50 000 F CFA par an. Les frais de scolarité varient en fonction de l'année d'études : 400 000 F CFA pour la 1ère année, 500 000 F CFA pour la 2ème année, et 600 000 F CFA pour la 3ème année."
@@ -401,7 +418,9 @@
         "patterns": [
           "Quelles sont les informations sur la formation en GCM?",
           "Dites-moi tout sur la formation GCM.",
-          "Pouvez-vous m'en dire plus sur la Licence professionnelle en GCM?"
+          "Pouvez-vous m'en dire plus sur la Licence professionnelle en GCM?",
+          "Dites-moi tout sur la Licence professionnelle en GCM.",
+          "Pouvez-vous m'en dire plus sur la formation?"
         ],
         "responses": [
           "La Licence professionnelle en Gestion Commerciale et Marketing (GCM) est une formation de 3 ans dans le domaine des Sciences Économiques et de Gestion. Elle comprend un tronc commun pendant les 4 premiers semestres, suivi d'une spécialisation en cours du soir pour les semestres 5 et 6."
