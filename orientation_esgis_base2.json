@@ -1,12 +1,86 @@
 {
 
    "intents": [
+          {
+       "tag": "salutation",
+       "patterns": [
+         "Salut",
+         "Bonjour",
+         "Salutations",
+         "Coucou",
+         "Y a-t-il quelqu'un ?",
+         "Bonne journée"
+       ],
+       "responses": [
+         "Bonjour ! Comment puis-je vous aider aujourd'hui ?","Bonjour :-), communiquez avec notre chatbot d'orientation pour vous assurer que votre projet est bien construit ou pour vous aider à en construire un", "Bonjour, merci de votre visite", "Salut, que puis-je faire pour vous ?", "Salut là, comment puis-je aider?"
+       ],
+       "context_set": ""
+     },
+    {
+      "tag": "choix",
+      "patterns": ["Je veux des conseils d'orientation"],
+      "responses": ["Vous voulez des conseils d'orientation. Choisissez entre l'enseignement primaire ou supérieur"]
+    },
+    {
+      "tag": "primaire",
+      "patterns": ["Je veux des conseils d'orientation pour l'enseignement primaire", "enseignement primaire", "primaire"],
+      "responses": ["Dans quelle classe êtes-vous exactement cette année ?"]
+    },
+    {
+      "tag": "3eme_annee",
+      "patterns": ["ma classe cette année est exactement la 3eme année", "3eme année"],
+      "responses": ["Vous avez le choix entre 3 branches de tronc commun où les sujets principaux diffèrent selon les coefficients. Quels sont certains de vos sujets de prédilection ? Choisissez-en 3 selon vos priorités (matières de religion islamique, arabe, français, anglais, géo-histoire, mathématiques, sciences de la vie et de la terre, physique et chimie, sciences de l'ingénieur)"]
+    },
+    {
+      "tag": "remerciements",
+      "patterns": ["merci", "C'est utile", "Merci beaucoup !"],
+      "responses": ["Heureux de vous aider !", "A tout moment !", "C'est avec plaisir"]
+    },
+    {
+      "tag": "au_revoir",
+      "patterns": ["A plus tard", "Au revoir"],
+      "responses": ["A plus tard, merci de votre visite", "Bonne journée", "Au revoir ! Revenez bientôt."]
+    },
+      {
+      "tag": "orientation_bac_stem",
+      "patterns": ["Quelles options après un bac STEM ?", "Orientation après un bac en sciences et technologies ?", "Que faire avec un bac STEM à l'ESGIS ?"],
+      "responses": ["Avec un bac STEM, vous pouvez explorer des domaines comme l'ingénierie, les technologies de l'information, ou les sciences appliquées à l'ESGIS. Quel domaine vous attire le plus ?"]
+    },
+    {
+      "tag": "orientation_bac_pro",
+      "patterns": ["Options après un bac professionnel", "Que faire après un bac pro ?", "Possibilités d'études à l'ESGIS avec un bac pro"],
+      "responses": ["Les étudiants avec un bac professionnel peuvent se diriger vers des programmes techniques, des formations professionnelles, ou même poursuivre vers des études supérieures dans des domaines spécialisés à l'ESGIS. Quelles sont vos aspirations ?"]
+    },
+    {
+      "tag": "orientation_bac_techno",
+      "patterns": ["Études possibles à l'ESGIS avec un bac techno", "Orientation après un bac technologique", "Que faire avec un bac technologique à l'ESGIS ?"],
+      "responses": ["Avec un bac technologique, vous avez plusieurs voies possibles à l'ESGIS, notamment dans les domaines de la technologie, de l'informatique, ou de l'ingénierie. Quelle spécialité vous intéresse ?"]
+    },
+      {
+      "tag": "orientation_bac_s",
+      "patterns": ["J'ai un bac S, que puis-je étudier à l'ESGIS ?", "Options après un bac S", "Que faire après un bac scientifique ?"],
+      "responses": ["Avec un bac S, vous avez plusieurs options à l'ESGIS, notamment dans les domaines de l'ingénierie, de la technologie, et des sciences. Quelle orientation vous intéresse ?"]
+    },
+    {
+      "tag": "orientation_bac_es",
+      "patterns": ["Quelles options après un bac ES ?", "Que faire avec un bac économique et social ?", "Études après un bac ES"],
+      "responses": ["Les étudiants avec un bac ES peuvent envisager des études en gestion, en économie, ou en sciences sociales à l'ESGIS. Quelle direction souhaitez-vous prendre ?"]
+    },
+    {
+      "tag": "orientation_bac_l",
+      "patterns": ["Options pour un bac L à l'ESGIS", "Que faire après un bac L ?", "Possibilités d'études après un bac littéraire"],
+      "responses": ["Avec un bac L, vous pouvez vous orienter vers des études en littérature, en langues, ou en sciences humaines à l'ESGIS. Avez-vous déjà une idée de votre orientation future ?"]
+    },
          {
       "tag": "formation_info",
       "patterns": [
         "Informations sur la formation en Commerce International",
         "Détails de la LPCI",
-        "Que puis-je savoir sur la Licence Professionnelle en Commerce International ?"
+        "Que puis-je savoir sur la Licence Professionnelle en Commerce International ?",
+        "LPCI",
+        "Commerce International",
+        "Licence en Commerce International",
+        "CI "
       ],
       "responses": [
         "La Licence Professionnelle en Commerce International (LPCI) à l'ESGIS est une formation de 6 semestres (3 ans) dans le domaine de la Gestion.",
@@ -20,18 +94,28 @@
       "patterns": [
         "Profil d'entrée pour la LPCI",
         "Conditions d'admission",
-        "Qui peut s'inscrire ?"
+        "Qui peut s'inscrire ?",
+        "Qui peut s'inscrire à la LPCI ?",
+        "Conditions d'admission à la LPCI",
+        "Conditions d'admission pour la LPCI",
+        "Conditions d'admission pour la Licence Professionnelle en Commerce International",
+        "Conditions d'admission pour la CI"
       ],
       "responses": [
         "Cette formation est ouverte aux étudiants ayant au moins le BAC 2 séries C, D, G2, G3. Les étudiants ayant le BAC 2 séries A pourront être autorisés sous réserve d’une note supérieure ou égale à 10/20 en mathématiques."
       ]
     },
-    {
+         {
       "tag": "competences_attendues",
       "patterns": [
         "Compétences attendues après la LPCI",
         "Que vais-je apprendre ?",
-        "Aptitudes à acquérir"
+        "Aptitudes à acquérir",
+        "Aptitudes à apprendre",
+        "Aptitudes à apprendre à la LPCI",
+        "Aptitudes à apprendre à la Licence Professionnelle en Commerce International",
+        "Aptitudes à apprendre à  en Commerce International",
+        "Aptitudes à apprendre à la CI"
       ],
       "responses": [
         "Le futur diplômé d’une Licence Professionnelle en Commerce International peut être employé dans des organisations commerciales internationales, dans des PME et Grandes Entreprises (industrielles, de distribution et de restauration, etc.).",
@@ -43,7 +127,13 @@
       "patterns": [
         "Débouchés professionnels après la LPCI",
         "Quels sont les métiers possibles ?",
-        "Que puis-je faire après cette formation ?"
+        "Que puis-je faire après cette formation ?",
+        "Quels sont les metiers à apprendre à la LPCI ?",
+        "Quels sont les metiers à apprendre à la Licence Professionnelle en Commerce International ?",
+        "Quels sont les metiers à apprendre à la LPCI ?",
+        "Quels sont les metiers à apprendre    en Commerce International ?",
+        "Quels sont les metiers à apprendre à la CI ?"
+
       ],
       "responses": [
         "Les diplômés de la LPCI peuvent exercer en tant que négociateurs internationaux, spécialistes d’achat et vente à l’international, chargés d’affaires export-import, chefs de produit international, chargés d’études commerciales au sein des organisations internationales, et bien plus encore.",
@@ -55,7 +145,11 @@
       "patterns": [
         "Quelles sont les informations sur la formation en MI?",
         "Dites-moi tout sur la formation MI.",
-        "Pouvez-vous m'en dire plus sur la Licence professionnelle en MI?"
+        "Pouvez-vous m'en dire plus sur la Licence professionnelle en MI?",
+        "Dites-moi tout sur la Licence professionnelle en MI.",
+        "MI",
+        "Licence professionnelle en Management International",
+        "LPMI"
       ],
       "responses": [
         "La Licence professionnelle en Management International (MI) est une formation de 3 ans dans le domaine des Sciences Économiques et de Gestion. Elle comprend un tronc commun pendant les 4 premiers semestres, suivi d'une spécialisation en cours du soir pour les semestres 5 et 6."
@@ -66,7 +160,11 @@
       "patterns": [
         "Quelles sont les conditions d'admission pour la LPMI?",
         "Qui peut s'inscrire à la LPMI?",
+        "Conditions d'admission pour la LPMI?",
+         "Conditions d'admission pour la MI?",
+        "Conditions d'admission pour la Licence professionnelle en Management International?",
         "Quel est le niveau d'études requis pour cette formation?"
+
       ],
       "responses": [
         "La LPMI est ouverte aux étudiants ayant au moins le BAC 2 toutes séries ou tout diplôme équivalent."
@@ -77,7 +175,11 @@
       "patterns": [
         "Quelles compétences puis-je acquérir en suivant cetteformation?",
         "Quel est l'objectif de la formation en MI?",
-        "Que vais-je apprendre en étudiant la LPMI?"
+        "Que vais-je apprendre en étudiant la LPMI?",
+         "Que vais-je apprendre en étudiant la MI?",
+        "Aptitudes à apprendre à la LPMI?",
+        "Aptitudes à apprendre à la Licence professionnelle en Management International?"
+
       ],
       "responses": [
         "La formation en Management International vise à développer chez les étudiants des compétences en gestion, en commerce international et en langues étrangères.",
@@ -89,7 +191,10 @@
       "patterns": [
         "Quels sont les débouchés professionnels après la LPMI?",
         "Quels métiers puis-je exercer après la formation?",
-        "Quelles sont les opportunités professionnelles?"
+        "Quelles sont les opportunités professionnelles?",
+        "Quels sont les metiers à apprendre à la LPMI?",
+         "Quels sont les metiers à apprendre à la MI?",
+        "Quels sont les metiers à apprendre à la Licence professionnelle en Management International?"
       ],
       "responses": [
         "Après avoir obtenu la Licence professionnelle en Management International, vous pouvez exercer diverses fonctions dans des entreprises internationales, des organisations internationales, des agences gouvernementales, des cabinets de conseil en commerce international, des institutions financières, et bien d'autres.",
@@ -101,7 +206,9 @@
       "patterns": [
         "Informations sur l'alternance en MI",
         "Est-ce qu'il y a une option d'alternance pour la formation en MI?",
-        "Pouvez-vous me parler de l'alternance en LPMI?"
+        "Pouvez-vous me parler de l'alternance en LPMI?",
+         "Pouvez-vous me parler de l'alternance en MI?",
+        "Pouvez-vous m'en dire plus sur l'alternance en LPMI?"
       ],
       "responses": [
         "Oui, il est possible de suivre la Licence professionnelle en Management International en alternance. L'alternance permet aux étudiants de combiner des périodes de formation théorique à l'université et des périodes de travail en entreprise.",
@@ -113,7 +220,10 @@
       "patterns": [
         "Quels sont les avantages de l'alternance en MI?",
         "Pourquoi choisir l'alternance pour la formation?",
-        "Quels sont les bénéfices de l'alternance en LPMI?"
+        "Quels sont les bénéfices de l'alternance en LPMI?",
+         "Quels sont les bénéfices de l'alternance en MI?",
+        "Pourquoi choisir l'alternance pour la Licence professionnelle en Management International?"
+
       ],
       "responses": [
         "L'alternance présente plusieurs avantages. Elle permet aux étudiants d'appliquer les connaissances acquises en cours dans un environnement professionnel réel.",
@@ -126,7 +236,9 @@
       "patterns": [
         "Quelles sont les conditions pour l'alternance en MI?",
         "Quels sont les critères d'éligibilité pour l'alternance?",
-        "Comment postuler à l'alternance en LPMI?"
+        "Comment postuler à l'alternance en LPMI?",
+         "Comment postuler à l'alternance en MI?",
+        "Comment postuler à l'alternance en Licence professionnelle en Management International?"
       ],
       "responses": [
         "Les conditions pour l'alternance en Management International peuvent varier en fonction des établissements d'enseignement.",
@@ -139,7 +251,9 @@
       "patterns": [
         "Combien de temps dure l'alternance en MI?",
         "Quelle est la durée de l'alternance en LPMI?",
-        "Pendant combien de temps suis-je en entreprise?"
+        "Pendant combien de temps suis-je en entreprise?",
+        "Quelle est la durée de l'alternance en MI?",
+        "Quelle est la durée de l'alternance en Licence professionnelle en Management International?"
       ],
       "responses": [
         "La durée de l'alternance en Licence professionnelle en Management International peut varier selon les établissements et les programmes.",
@@ -152,7 +266,11 @@
       "patterns": [
         "Informations sur la Licence Professionnelle en Finance Banque et Assurance",
         "Détails de la LPFBA",
-        "Que puis-je savoir sur la formation en Finance Banque et Assurance ?"
+        "Que puis-je savoir sur la formation en Finance Banque et Assurance ?",
+        "Détails de la formation en Finance Banque et Assurance",
+        "Informations sur la formation en Finance Banque et Assurance",
+        "FBA",
+        "LPFBA"
       ],
       "responses": [
         "La Licence Professionnelle en Finance Banque et Assurance (LPFBA) à l'ESGIS est une formation de 6 semestres (3 ans) dans le domaine des Sciences Economiques et de Gestion.",
@@ -165,8 +283,9 @@
       "tag": "profil_entree",
       "patterns": [
         "Profil d'entrée pour la LPFBA",
-        "Conditions d'admission",
-        "Qui peut s'inscrire ?"
+        "Conditions d'admission LPFBA",
+        "Qui peut s'inscrire ? LPFBA",
+        "Conditions d'admission LPFBA"
       ],
       "responses": [
         "Cette formation est ouverte aux étudiants ayant au moins le BAC 2 séries C, D, G2."
@@ -189,7 +308,11 @@
       "patterns": [
         "Débouchés professionnels après la LPFBA",
         "Quels sont les métiers possibles ?",
-        "Que puis-je faire après cette formation ?"
+        "Que puis-je faire après cette formation ?",
+        "Quels sont les emplois accessibles ?",
+        "Quels sont les emplois accessibles à cette formation ?",
+        "Quels sont les emplois accessibles à la formation ?",
+        "Quels sont les emplois accessibles à la LPFBA ?"
       ],
       "responses": [
         "La LPFBA offre de nombreux emplois accessibles, tels que trésorier ou caissier, agent de crédit, financier, gestionnaire des produits d'assurance, banquier, agent commercial d'assurances, etc.",
@@ -201,7 +324,12 @@
       "patterns": [
         "Informations sur la formation en Développement d'Application",
         "Détails de la LPDA",
-        "Que puis-je savoir sur la Licence Professionnelle en Développement d'Application ?"
+        "Détails de la formation en Développement d'Application",
+        "Détails de la DA",
+        "Que puis-je savoir sur la Licence Professionnelle en Développement d'Application ?",
+        "Détails de la Licence Professionnelle en Développement d'Application",
+        "Détails de la Licence Professionnelle en DA"
+
       ],
       "responses": [
         "La Licence Professionnelle en Développement d'Application (LPDA) à l'ESGIS est une formation de 6 semestres (3 ans) dans le domaine de l'Informatique.",
@@ -215,7 +343,9 @@
       "patterns": [
         "Profil d'entrée pour la LPDA",
         "Conditions d'admission",
-        "Qui peut s'inscrire ?"
+        "Qui peut s'inscrire à LPDA?",
+        "Conditions d'admission LPDA",
+        "Conditions d'admission DA"
       ],
       "responses": [
         "Cette formation est ouverte aux candidats titulaires des baccalauréats II séries C, D, E, F2 et F3 ou tout titre équivalent et ayant de bonnes aptitudes en mathématiques et en physique."
@@ -226,7 +356,8 @@
       "patterns": [
         "Compétences attendues après la LPDA",
         "Que vais-je apprendre ?",
-        "Aptitudes à acquérir"
+        "Aptitudes à acquérir",
+        "Aptitudes à accomplir LPDA"
       ],
       "responses": [
         "La LPDA permet aux futurs diplômés d'acquérir des compétences en développement d'applications, tests de logiciels, utilisation de patrons d'architecture, gestion de projets informatiques, et bien plus encore.",
@@ -238,7 +369,9 @@
       "patterns": [
         "Débouchés professionnels après la LPDA",
         "Quels sont les métiers possibles ?",
-        "Que puis-je faire après cette formation ?"
+        "Que puis-je faire après cette formation ?",
+        "Quels sont les emplois accessibles ?",
+        "Quels sont les emplois accessibles à cette formation ?"
       ],
       "responses": [
         "Les diplômés en LPDA peuvent viser des métiers tels que développeur d'applications, administrateur de base de données pour une PME/PMI, chef de projet en conception et administration de serveurs d'applications, technico-commercial, et bien plus encore.",
@@ -250,7 +383,15 @@
         "patterns": [
           "Quelles sont les informations sur la formation en OGRH?",
           "Dites-moi tout sur la formation OGRH.",
-          "Pouvez-vous m'en dire plus sur la Licence professionnelle en OGRH?"
+          "Pouvez-vous m'en dire plus sur la Licence professionnelle en OGRH?",
+          "Dites-moi tout sur la Licence professionnelle en OGRH",
+          "Pouvez-vous m'en dire plus sur la LP-OGRH?",
+          "Dites-moi tout sur la LP-OGRH",
+          "Pouvez-vous m'en dire plus sur la Licence professionnelle en Organisation et Gestion des Ressources Humaines?",
+          "Dites-moi tout sur la Licence professionnelle en Organisation et Gestion des Ressources Humaines",
+          "ORGH",
+          "LP-OGRH"
+
         ],
         "responses": [
           "La Licence professionnelle en Organisation et Gestion des Ressources Humaines (OGRH) est une formation de 3 ans dans le domaine des Sciences Économiques et de Gestion. Elle comprend un tronc commun pendant les 4 premiers semestres, suivi d'une spécialisation en cours du soir pour les semestres 5 et 6."
@@ -261,7 +402,10 @@
         "patterns": [
           "Quelles sont les conditions d'admission pour la LP-OGRH?",
           "Qui peut s'inscrire à la LP-OGRH?",
-          "Quel est le niveau d'études requis pour cette formation?"
+          "Quel est le niveau d'études requis pour cette formation?",
+          "Quel est le niveau d'études requis pour la LP-OGRH?",
+          "Quel est le niveau d'études requis pour la licence professionnelle en Organisation et Gestion des Ressources Humaines?",
+          "Quel est le niveau d'études requis pour la licence professionnelle en OGRH?"
         ],
         "responses": [
           "Cette formation est ouverte aux étudiants ayant au moins le BAC 2 séries C, D, G2, G3 ou tout diplôme équivalent. Les étudiants ayant le BAC 2 séries A pourront être autorisés sous réserve d'une note supérieure ou égale à 10/20 en mathématiques au BAC 1 et au BAC 2."
@@ -283,7 +427,8 @@
         "patterns": [
           "Quels sont les débouchés professionnels après avoir obtenu cette licence?",
           "Quel genre de carrière puis-je envisager avec un diplôme en OGRH?",
-          "Où pourrais-je travailler après avoir terminé cette formation?"
+          "Où pourrais-je travailler après avoir terminé cette formation?",
+          "Quels sont les débouchés professionnels pour avoir obtenu cette formation?"
         ],
         "responses": [
           "Tout titulaire d’une LP-OGRH peut exercer en tant qu'Assistant en ressources humaines, Chargé de gestion de ressources humaines, Chargé de recrutement, Chargé de la rémunération, Chargé des relations sociales, Chargé des relations interpersonnelles, etc."
@@ -294,7 +439,8 @@
         "patterns": [
           "Quand commencent les inscriptions pour la LP-OGRH?",
           "Quand débutent les cours pour la formation en OGRH?",
-          "Pouvez-vous me donner les dates clés pour cette formation?"
+          "Pouvez-vous me donner les dates clés pour cette formation?",
+          "Quand commencent les inscriptions pour la licence professionnelle en Organisation et Gestion des Ressources Humaines?"
         ],
         "responses": [
           "Les inscriptions débutent en août 2023, et les enseignements commencent en octobre 2023."
@@ -305,7 +451,8 @@
         "patterns": [
           "Comment puis-je vous contacter pour obtenir plus d'informations?",
           "Quelle est votre adresse e-mail?",
-          "Pouvez-vous me donner vos coordonnées?"
+          "Pouvez-vous me donner vos coordonnées?",
+          "Comment puis-je vous contacter pour avoir plus d'informations?"
         ],
         "responses": [
           "Vous pouvez nous contacter à l'adresse e-mail esgis.togo@esgis.org. Pour plus d'informations, vous pouvez également visiter notre site web : http://www.esgis.org."
@@ -316,7 +463,8 @@
         "patterns": [
           "Combien coûte la formation en OGRH?",
           "Quels sont les frais d'inscription pour la Licence professionnelle?",
-          "Pouvez-vous me donner des détails sur les frais de scolarité?"
+          "Pouvez-vous me donner des détails sur les frais de scolarité?",
+          "Combien coûte la formation en Organisation et Gestion des Ressources Humaines?"
         ],
         "responses": [
           "Les frais d'inscription sont de 50 000 F CFA par an. Les frais de scolarité varient en fonction de l'année d'études : 400 000 F CFA pour la 1ère année, 500 000 F CFA pour la 2ème année, et 600 000 F CFA pour la 3ème année."
@@ -327,7 +475,9 @@
         "patterns": [
           "Quelles sont les informations sur la formation en GCM?",
           "Dites-moi tout sur la formation GCM.",
-          "Pouvez-vous m'en dire plus sur la Licence professionnelle en GCM?"
+          "Pouvez-vous m'en dire plus sur la Licence professionnelle en GCM?",
+          "Dites-moi tout sur la Licence professionnelle en GCM.",
+          "Pouvez-vous m'en dire plus sur la formation?"
         ],
         "responses": [
           "La Licence professionnelle en Gestion Commerciale et Marketing (GCM) est une formation de 3 ans dans le domaine des Sciences Économiques et de Gestion. Elle comprend un tronc commun pendant les 4 premiers semestres, suivi d'une spécialisation en cours du soir pour les semestres 5 et 6."
@@ -476,20 +626,6 @@
         "Les frais d'inscription sont de 50 000 F CFA par an. Les frais de scolarité varient en fonction de l'année d'études : 400 000 FCFA pour la 1ère année, 500 000 F CFA pour la 2ème année, et 600 000 F CFA pour la 3ème année."
       ]
     },
-
-      {
-       "tag": "salutation",
-       "patterns": [
-         "Salut",
-         "Bonjour",
-         "Salutations",
-         "Coucou"
-       ],
-       "responses": [
-         "Bonjour ! Comment puis-je vous aider aujourd'hui ?"
-       ],
-       "context_set": ""
-     },
      {
        "tag": "présentation",
        "patterns": [
@@ -541,19 +677,6 @@
        ],
        "responses": [
          "L'ESGIS bénéficie d'un corps enseignant de qualité qui allie l'expérience à la compétence. Nos enseignants sont hautement qualifiés dans leurs domaines respectifs, et ils sont dévoués à fournir une éducation exceptionnelle à nos étudiants."
-       ],
-       "context_set": ""
-     },
-     {
-       "tag": "salutation",
-       "patterns": [
-         "Salut",
-         "Bonjour",
-         "Salutations",
-         "Coucou"
-       ],
-       "responses": [
-         "Bonjour ! Comment puis-je vous aider aujourd'hui ?"
        ],
        "context_set": ""
      },
@@ -660,25 +783,6 @@
       ],
       "context_set": ""
     },
-            {
-          "tag": "salutation",
-          "patterns": [
-             "Salut",
-             "Comment ça va ?",
-             "Y a-t-il quelqu'un ici ?",
-             "Bonjour",
-             "ça va ?",
-             "Hey",
-             "Quoi de neuf ?",
-             "??? ??? ??"
-          ],
-          "responses": [
-             "Bonjour !",
-             "Content de te revoir !",
-             "Salut, comment puis-je t'aider ?"
-          ],
-          "context_set": ""
-       },
        {
           "tag": "au_revoir",
           "patterns": [
@@ -688,7 +792,6 @@
              "À plus tard",
              "Au revoir",
              "Je pars",
-             "Salut",
              "Passe une bonne journée",
              "On se reparle plus tard",
              "Ttyl",
@@ -752,32 +855,6 @@
           "context_set": ""
        },
        {
-          "tag": "horaires",
-          "patterns": [
-             "Horaire de l'université",
-             "Quels sont les horaires de l'université ?",
-             "Jours de travail",
-             "Quand êtes-vous ouverts ?",
-             "Quels sont vos horaires ?",
-             "Heures d'ouverture",
-             "Quand l'université est-elle ouverte ?",
-             "Horaire de l'université",
-             "Qu'en est-il de l'horaire de l'université ?",
-             "L'université est-elle ouverte le samedi ?",
-             "Parle-moi de l'horaire de l'université",
-             "Quels sont les horaires de l'université ?",
-             "À quelle heure dois-je venir à l'université ?",
-             "Quand dois-je assister à l'université ?",
-             "Quel est mon horaire universitaire ?",
-             "Horaire de l'université",
-             "Horaire de l'université"
-          ],
-          "responses": [
-             "L'université est ouverte de 8h à 21h30 du lundi au samedi !"
-          ],
-          "context_set": ""
-       },
-       {
           "tag": "numéro",
           "patterns": [
              "Plus d'informations",
@@ -802,73 +879,6 @@
           "context_set": ""
        },
        {
-          "tag": "cours",
-          "patterns": [
-             "Liste des cours",
-             "Liste des cours proposés",
-             "Liste des cours proposés à l'université",
-             "Quels sont les cours proposés dans votre université ?",
-             "Cours ?",
-             "Cours proposés",
-             "Cours proposés à l'université (nom de votre université)",
-             "Cours que vous proposez",
-             "Branches ?",
-             "Cours disponibles à l'UNI ?",
-             "Branches disponibles à votre université ?",
-             "Quels sont les cours à l'UNI ?",
-             "Quelles sont les branches à l'UNI ?",
-             "Quels sont les cours à l'UNI ?",
-             "Branches disponibles à l'UNI ?",
-             "Pouvez-vous me dire quels sont les cours disponibles à l'UNI ?",
-             "Pouvez-vous me dire quelles sont les branches disponibles à l'UNI ?",
-             "Génie informatique ?",
-             "Informatique",
-             "Génie informatique ?",
-             "IT",
-             "Technologie de l'information",
-             "AI/ML",
-             "Génie mécanique",
-             "Génie chimique",
-             "Génie civil"
-          ],
-          "responses": [
-             "Notre université propose des formations en technologie de l'information, génie informatique, génie mécanique, génie chimique, génie civil et génie électrique."
-          ],
-          "context_set": ""
-       },
-       {
-          "tag": "frais",
-          "patterns": [
-             "Informations sur les frais",
-             "Informations sur les frais",
-             "Dites-moi les frais",
-             "Frais universitaires",
-             "Frais par semestre",
-             "Quels sont les frais de chaque semestre ?",
-             "Quels sont les frais de chaque année ?",
-             "Quels sont les frais ?",
-             "Quels sont les frais ?",
-             "Combien coûtent les frais ?",
-             "Frais de première année",
-             "Frais",
-             "À propos des frais",
-             "Dites-moi quelque chose sur les frais",
-             "Quels sont les frais de l'auberge ?",
-             "Combien coûtent les frais ?",
-             "Frais de l'auberge",
-             "Frais de la chambre AC",
-             "Frais de la chambre non-AC",
-             "Frais de la chambre AC pour les filles",
-             "Frais de la chambre non-AC pour les filles",
-             "Frais de la chambre AC pour les garçons",
-             "Frais de la chambre non-AC pour les garçons"
-          ],
-          "responses": [
-             "Pour plus de détails sur les frais, visitez <a target=\"_blank\" href=\"LIEN\">ici</a>"
-          ],
-          "context_set": ""
-       },
-       {
           "tag": "emplacement",
           "patterns": [
              "Où est située l'université",
@@ -887,34 +897,6 @@
           ],
           "responses": [
              "<a target=\"_blank\" href=\"LIEN GOOGLE MAP\">ici</a>"
-          ],
-          "context_set": ""
-       },
-       {
-          "tag": "auberge",
-          "patterns": [
-             "Installations de l'auberge",
-             "Service d'auberge",
-             "Emplacement de l'auberge",
-             "Adresse de l'auberge",
-             "Installations de l'auberge",
-             "Frais d'auberge",
-             "L'université propose-t-elle une auberge ?",
-             "Y a-t-il une auberge ?",
-             "Où est l'auberge ?",
-             "Avez-vous une auberge ?",
-             "Avez-vous une auberge ?",
-             "Auberge",
-             "Capacité de l'auberge",
-             "Quels sont les frais de l'auberge ?",
-             "Comment entrer dans l'auberge",
-             "Quelle est l'adresse de l'auberge",
-             "À quelle distance se trouve l'auberge de l'université",
-             "Distance entre l'université et l'auberge",
-             "Distance entre l'auberge et l'université"
-          ],
-          "responses": [
-             "Pour plus de détails sur l'auberge, visitez <a target=\"_blank\" href=\"LIEN DE DÉTAIL DE L'AUBERGE OU TOUT LIEN D'INFORMATION OU AJOUTEZ VOS PROPRES RÉPONSES\">ici</a>"
           ],
           "context_set": ""
        },
@@ -1059,7 +1041,7 @@
              "Qu'y a-t-il à manger ?"
           ],
           "responses": [
-             "Nous servons Franky, Locho, Alu-puri, Kachori, Khavsa, Thaali et bien d'autres plats au menu."
+             "Nous servons arichot, aimolo, Riz tomate, kanami, thé, Lait glacé et bien d'autres plats au menu."
           ],
           "context_set": ""
        },
@@ -1157,46 +1139,6 @@
           "context_set": ""
        },
        {
-          "tag": "admission",
-          "patterns": [
-             "Quel est le processus d'admission",
-             "Quel est le processus d'admission",
-             "Admission",
-             "Admissions ouvertes",
-             "Admissions",
-             "Comment puis-je être admis",
-             "Comment puis-je être admis à l'université",
-             "Procédure d'admission",
-             "Admission à l'université"
-          ],
-          "responses": [
-             "Pour plus d'informations sur le processus d'admission, visitez <a target=\"_blank\" href=\"LIEN DU PROCESSUS D'ADMISSION SUR LE SITE WEB DE VOTRE UNIVERSITÉ\">ici</a>"
-          ],
-          "context_set": ""
-       },
-       {
-          "tag": "département",
-          "patterns": [
-             "Départements de l'université",
-             "Liste des départements",
-             "Liste des départements de l'université",
-             "Liste des départements académiques",
-             "Liste des départements de l'université",
-             "Départements académiques",
-             "Branches académiques",
-             "Quels sont les départements à l'université",
-             "Liste des départements",
-             "Départements académiques de l'université",
-             "Liste des branches académiques",
-             "Liste des départements",
-             "Quels départements académiques avez-vous"
-          ],
-          "responses": [
-             "Notre université propose une gamme de départements académiques, notamment le génie informatique, le génie mécanique, le génie chimique, le génie civil, le génie électrique et bien d'autres. Vous pouvez en savoir plus sur nos départements sur le <a target=\"_blank\" href=\"LIEN VERS LES DÉPARTEMENTS DE L'UNIVERSITÉ\">site web</a> de l'université."
-          ],
-          "context_set": ""
-       },
-       {
           "tag": "remerciement",
           "patterns": [
              "Merci",
@@ -1248,6 +1190,7 @@
           ],
           "context_set": ""
        }
+
   ]
 
 

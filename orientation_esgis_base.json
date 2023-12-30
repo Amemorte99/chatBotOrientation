@@ -7,13 +7,139 @@
          "Salut",
          "Bonjour",
          "Salutations",
-         "Coucou"
+         "Coucou",
+         "Y a-t-il quelqu'un ?",
+         "Bonne journée"
        ],
        "responses": [
-         "Bonjour ! Comment puis-je vous aider aujourd'hui ?"
+         "Bonjour :-), communiquez avec notre chatbot d'orientation pour vous assurer que votre projet est bien construit ou pour vous aider à en construire un"
        ],
        "context_set": ""
      },
+      {
+         "tag": "orientation_premiere_annee",
+         "patterns": [
+            "Je suis en première année et je ne sais pas quelle filière choisir, pouvez-vous m'aider ?",
+            "Quelles sont les meilleures filières pour un débutant comme moi à l'ESGIS ?",
+            "Je suis nouveau à l'ESGIS et je me sens perdu, pouvez-vous me conseiller sur les spécialisations ?",
+            "Quelles options ai-je en première année pour ma carrière future ?",
+            "Comment choisir la bonne filière en première année en fonction de mes intérêts ?"
+         ],
+         "responses": [
+            "Bien sûr, je peux vous aider à choisir une filière. Pouvez-vous me parler de vos intérêts et objectifs professionnels ?",
+            "Explorons ensemble les filières disponibles. Quelles matières vous intéressent le plus ?",
+            "Je suis là pour vous guider dans le choix de votre filière. Parlons de vos compétences et de ce que vous aimez faire.",
+            "Selon vos intérêts et aspirations, je peux recommander quelques filières. Êtes-vous intéressé par la science, la gestion, ou autre chose ?"
+         ],
+         "context_set": ""
+      },
+      {
+         "tag": "assistance_inscriptions",
+         "patterns": [
+            "Comment m'inscrire aux cours à l'ESGIS ?",
+            "Je suis perdu(e) dans le processus d'inscription, pouvez-vous m'aider ?",
+            "Quelles sont les étapes pour choisir mes modules à l'ESGIS ?",
+            "Je viens de m'inscrire à l'ESGIS et je ne sais pas comment m'inscrire aux cours.",
+            "Je suis nouveau/nouvelle à l'ESGIS, comment naviguer sur le portail étudiant ?"
+         ],
+         "responses": [
+            "Laissez-moi vous guider à travers le processus d'inscription. Voici les étapes à suivre pour vous inscrire aux cours.",
+            "Je peux vous aider avec le processus d'inscription. Commençons par vous connecter au portail étudiant.",
+            "L'inscription aux modules est simple. Vous devez vous connecter au portail étudiant, puis suivre ces étapes...",
+            "Si vous avez des difficultés avec l'inscription, voici un tutoriel étape par étape pour vous aider."
+         ],
+         "context_set": ""
+      },
+      {
+         "tag": "support_etudiants_internationaux",
+         "patterns": [
+            "Quelles sont les démarches administratives pour un étudiant international à l'ESGIS ?",
+            "Je suis un étudiant international, comment puis-je obtenir de l'aide pour l'hébergement ?",
+            "Où puis-je trouver des informations sur les visas et l'intégration à l'ESGIS ?",
+            "En tant qu'étudiant international, à qui dois-je m'adresser pour des questions administratives ?",
+            "Quelles sont les ressources disponibles pour les étudiants internationaux à l'ESGIS ?"
+         ],
+         "responses": [
+            "Je peux vous fournir des informations sur les démarches administratives pour les étudiants internationaux. Voici ce que vous devez savoir...",
+            "Pour l'hébergement et les visas, voici quelques conseils et ressources utiles à l'ESGIS.",
+            "L'ESGIS offre plusieurs services pour faciliter l'intégration des étudiants internationaux. Voici comment vous pouvez en profiter.",
+            "Pour toute question administrative, l'ESGIS dispose d'un bureau dédié aux étudiants internationaux. Voici comment les contacter."
+         ],
+         "context_set": ""
+      },
+     {
+    "tag": "choix_orientation",
+    "patterns": ["Je veux des conseils d'orientation", "Quelles études après le bac ?", "Orientation universitaire"],
+    "responses": [
+      "Vous cherchez des conseils d'orientation à l'ESGIS. Nous proposons une variété de programmes en licence professionnelle, notamment en Développement d’Application, Commerce International, Comptabilité Contrôle Audit, Finance Banque et Assurance, Gestion Commerciale et Marketing, Management International, Organisation et Gestion des Ressources Humaines, et Transport et Services Logistiques. Dans quel domaine souhaitez-vous vous orienter ?"
+    ]
+  },
+    {
+      "tag": "orientation_licence",
+      "patterns": ["Quelles options en licence ?", "Orientation pour la licence", "Programmes de licence à l'ESGIS"],
+      "responses": ["Pour les programmes de licence à l'ESGIS, vous pouvez choisir parmi une variété de domaines. Quels sont vos centres d'intérêt ?"]
+    },
+    {
+      "tag": "orientation_master",
+      "patterns": ["Options pour le master", "Programmes de master à l'ESGIS", "Quel master choisir ?"],
+      "responses": ["L'ESGIS propose plusieurs programmes de master dans différents domaines. Êtes-vous intéressé par un domaine spécifique ?"]
+    },
+      {
+      "tag": "liste_des_filieres",
+      "patterns": ["Quelles sont les filières à l'ESGIS ?", "Liste des programmes à l'ESGIS", "Quels programmes sont offerts à l'ESGIS ?"],
+      "responses": [
+        "À l'ESGIS, nous offrons une variété de programmes professionnels, y compris :",
+        "- Développement d’Application (LPDA) en Sciences et Technologies, spécialité Développement d’application.",
+        "- Commerce International (LPCI) en Sciences Economiques et de Gestion, spécialité Commerce International.",
+        "- Comptabilité Contrôle Audit (LPCCA) en Sciences Economiques et de Gestion, spécialité Comptabilité Contrôle Audit.",
+        "- Finance Banque et Assurance (LPFBA) en Sciences Economiques et de Gestion, spécialité Finance Banque et Assurance.",
+        "- Gestion Commerciale et Marketing (LPGCM) en Sciences Economiques et de Gestion, spécialité Gestion Commerciale et Marketing.",
+        "- Management International (LPMI) en Sciences Economiques et de Gestion, spécialité Management International.",
+        "- Organisation et Gestion des Ressources Humaines (LP-OGRH) en Sciences Economiques et de Gestion, spécialité Organisation et Gestion des Ressources Humaines.",
+        "- Transport et Services Logistiques (LPTSL) en Sciences Economiques et de Gestion, spécialité Transport et Services logistiques.",
+        "Quelle filière vous intéresse particulièrement ?"
+      ]
+    },
+    {
+      "tag": "remerciements",
+      "patterns": ["merci", "C'est utile", "Merci beaucoup !"],
+      "responses": ["Heureux de vous aider !", "A tout moment !", "C'est avec plaisir."]
+    },
+    {
+      "tag": "au_revoir",
+      "patterns": ["A plus tard", "Au revoir"],
+      "responses": ["A plus tard, merci de votre visite", "Bonne journée", "Au revoir ! Revenez bientôt."]
+    },
+      {
+      "tag": "orientation_bac_stem",
+      "patterns": ["Quelles options après un bac STEM ?", "Orientation après un bac en sciences et technologies ?", "Que faire avec un bac STEM à l'ESGIS ?"],
+      "responses": ["Avec un bac STEM, vous pouvez explorer des domaines comme l'ingénierie, les technologies de l'information, ou les sciences appliquées à l'ESGIS. Quel domaine vous attire le plus ?"]
+    },
+    {
+      "tag": "orientation_bac_pro",
+      "patterns": ["Options après un bac professionnel", "Que faire après un bac pro ?", "Possibilités d'études à l'ESGIS avec un bac pro"],
+      "responses": ["Les étudiants avec un bac professionnel peuvent se diriger vers des programmes techniques, des formations professionnelles, ou même poursuivre vers des études supérieures dans des domaines spécialisés à l'ESGIS. Quelles sont vos aspirations ?"]
+    },
+    {
+      "tag": "orientation_bac_techno",
+      "patterns": ["Études possibles à l'ESGIS avec un bac techno", "Orientation après un bac technologique", "Que faire avec un bac technologique à l'ESGIS ?"],
+      "responses": ["Avec un bac technologique, vous avez plusieurs voies possibles à l'ESGIS, notamment dans les domaines de la technologie, de l'informatique, ou de l'ingénierie. Quelle spécialité vous intéresse ?"]
+    },
+      {
+      "tag": "orientation_bac_s",
+      "patterns": ["J'ai un bac S, que puis-je étudier à l'ESGIS ?", "Options après un bac S", "Que faire après un bac scientifique ?"],
+      "responses": ["Avec un bac S, vous avez plusieurs options à l'ESGIS, notamment dans les domaines de l'ingénierie, de la technologie, et des sciences. Quelle orientation vous intéresse ?"]
+    },
+    {
+      "tag": "orientation_bac_es",
+      "patterns": ["Quelles options après un bac ES ?", "Que faire avec un bac économique et social ?", "Études après un bac ES"],
+      "responses": ["Les étudiants avec un bac ES peuvent envisager des études en gestion, en économie, ou en sciences sociales à l'ESGIS. Quelle direction souhaitez-vous prendre ?"]
+    },
+    {
+      "tag": "orientation_bac_l",
+      "patterns": ["Options pour un bac L à l'ESGIS", "Que faire après un bac L ?", "Possibilités d'études après un bac littéraire"],
+      "responses": ["Avec un bac L, vous pouvez vous orienter vers des études en littérature, en langues, ou en sciences humaines à l'ESGIS. Avez-vous déjà une idée de votre orientation future ?"]
+    },
          {
       "tag": "formation_info",
       "patterns": [
