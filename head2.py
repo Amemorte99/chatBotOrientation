@@ -5,9 +5,7 @@ import matplotlib.pyplot as plt
 def main():
     # Charger le fichier JSON dans un DataFrame
     try:
-        with open('orientation_esgis_base2.json', 'r') as file:
-            data = pd.read_json('orientation_esgis_base2.json')
-            df = pd.DataFrame(data['intents'])
+        df = pd.read_json('orientation_esgis_base2.json')
     except FileNotFoundError:
         print("Erreur : fichier 'orientation_esgis_base2.json' introuvable.")
         return
@@ -25,6 +23,7 @@ def main():
     print(df.tail().to_string(index=False))
     print("\n")
 
+    # Vérifier la présence des colonnes 'patterns' et 'responses'
     if 'patterns' not in df.columns:
         print("Erreur : colonne 'patterns' introuvable dans le DataFrame.")
         return
@@ -40,6 +39,7 @@ def main():
     # Afficher les statistiques descriptives
     print("Statistiques descriptives des longueurs de patterns et de réponses :")
     print(df[['pattern_length', 'response_length']].describe().to_string())
+    print("\n")
 
     # Créer un heatmap de corrélation
     corr = df.corr()
@@ -47,6 +47,11 @@ def main():
     sns.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns, cmap='coolwarm', annot=True)
     plt.title('Heatmap de Corrélation')
     plt.show()
+
+    # Effectuer des analyses statistiques avec la fonction ensemble
+    print("Analyses statistiques avec la fonction ensemble :")
+    ensemble_stats = df[['pattern_length', 'response_length']].agg(['mean', 'std', 'min', 'max']).transpose()
+    print(ensemble_stats)
 
 if __name__ == "__main__":
     main()
