@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import tkinter as tk
 from pandastable import Table
 import json
+from tabulate import tabulate
 
 
 def main():
@@ -19,15 +20,16 @@ def main():
         print("Erreur lors du chargement du fichier JSON :", str(e))
         return
 
-    # Afficher les premières lignes du DataFrame
+        # Afficher les premières lignes du DataFrame
     print("Premières lignes du DataFrame :")
-    print(df.head().to_string(index=False, justify='left', col_space=25, max_colwidth=40))
+    print(tabulate(df.head(), headers='keys', tablefmt='grid'))
     print("\n")
 
     # Afficher les dernières lignes du DataFrame
     print("Dernières lignes du DataFrame :")
-    print(df.tail().to_string(index=False, justify='left', col_space=25, max_colwidth=40))
+    print(tabulate(df.tail(), headers='keys', tablefmt='grid'))
     print("\n")
+
     if 'patterns' not in df.columns:
         print("Erreur : colonne 'patterns' introuvable dans le DataFrame.")
         return
@@ -36,17 +38,20 @@ def main():
         print("Erreur : colonne 'responses' introuvable dans le DataFrame.")
         return
 
-        # Calculer la longueur des patterns et des réponses
+    # Calculer la longueur des patterns et des réponses
     df['pattern_length'] = df['patterns'].apply(lambda x: len(x))
     df['response_length'] = df['responses'].apply(lambda x: len(x))
 
     # Afficher les statistiques descriptives
     print("Statistiques descriptives des longueurs de patterns et de réponses :")
-    print(df[['pattern_length', 'response_length']].describe().to_string())
+    print(tabulate(df[['pattern_length', 'response_length']].describe(), headers='keys', tablefmt='grid'))
+    print("\n")
+
+    # Exclure les colonnes non numériques pour le calcul de corrélation
+    numeric_cols = df.select_dtypes(include=['int', 'float']).columns
+    corr = df[numeric_cols].corr()
 
     # Créer un heatmap de corrélation
-    numeric_columns = df.select_dtypes(include=['float', 'int']).columns
-    corr = df[numeric_columns].corr()
     plt.figure(figsize=(8, 6))
     sns.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns, cmap='coolwarm', annot=True)
     plt.title('Heatmap de Corrélation')
@@ -56,6 +61,7 @@ def main():
     print("Analyses statistiques avec la fonction ensemble :")
     ensemble_stats = df[['pattern_length', 'response_length']].agg(['mean', 'std', 'min', 'max']).transpose()
     print(ensemble_stats.to_string(justify='left', col_space=25))
+
     display_dataframe(df)
 
 
