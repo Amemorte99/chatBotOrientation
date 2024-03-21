@@ -5,6 +5,15 @@ import tkinter as tk
 from pandastable import Table
 import json
 from tabulate import tabulate
+import unicodedata
+
+
+def normalize_string(text):
+    """Fonction pour normaliser les chaînes de caractères en retirant les caractères indésirables."""
+    if isinstance(text, list):
+        return [unicodedata.normalize('NFKD', item).encode('ascii', 'ignore').decode('utf-8', 'ignore') for item in text]
+    else:
+        return unicodedata.normalize('NFKD', text).encode('ascii', 'ignore').decode('utf-8', 'ignore')
 
 
 def main():
@@ -20,7 +29,11 @@ def main():
         print("Erreur lors du chargement du fichier JSON :", str(e))
         return
 
-        # Afficher les premières lignes du DataFrame
+    # Normaliser les colonnes contenant du texte
+    df['patterns'] = df['patterns'].apply(normalize_string)
+    df['responses'] = df['responses'].apply(normalize_string)
+
+    # Afficher les premières lignes du DataFrame
     print("Premières lignes du DataFrame :")
     print(tabulate(df.head(), headers='keys', tablefmt='grid'))
     print("\n")
@@ -60,7 +73,8 @@ def main():
     # Effectuer des analyses statistiques avec la fonction ensemble
     print("Analyses statistiques avec la fonction ensemble :")
     ensemble_stats = df[['pattern_length', 'response_length']].agg(['mean', 'std', 'min', 'max']).transpose()
-    print(ensemble_stats.to_string(justify='left', col_space=25))
+    print(tabulate(ensemble_stats, headers='keys', tablefmt='grid'))
+    print("\n")
 
     display_dataframe(df)
 
