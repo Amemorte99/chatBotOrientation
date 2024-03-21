@@ -3,15 +3,11 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import tkinter as tk
 from pandastable import Table
-import json
-
 
 def main():
     # Charger le fichier JSON dans un DataFrame
     try:
-        with open('orientation_esgis_base2.json') as f:
-            data = json.load(f)
-            df = pd.DataFrame(data['intents'])
+        df = pd.read_json('orientation_esgis_base2.json')
     except FileNotFoundError:
         print("Erreur : fichier 'orientation_esgis_base2.json' introuvable.")
         return
@@ -28,6 +24,7 @@ def main():
     print("Dernières lignes du DataFrame :")
     print(df.tail().to_string(index=False, justify='left', col_space=25, max_colwidth=40))
     print("\n")
+
     if 'patterns' not in df.columns:
         print("Erreur : colonne 'patterns' introuvable dans le DataFrame.")
         return
@@ -36,7 +33,7 @@ def main():
         print("Erreur : colonne 'responses' introuvable dans le DataFrame.")
         return
 
-        # Calculer la longueur des patterns et des réponses
+    # Calculer la longueur des patterns et des réponses
     df['pattern_length'] = df['patterns'].apply(lambda x: len(x))
     df['response_length'] = df['responses'].apply(lambda x: len(x))
 
@@ -45,8 +42,7 @@ def main():
     print(df[['pattern_length', 'response_length']].describe().to_string())
 
     # Créer un heatmap de corrélation
-    numeric_columns = df.select_dtypes(include=['float', 'int']).columns
-    corr = df[numeric_columns].corr()
+    corr = df.corr()
     plt.figure(figsize=(8, 6))
     sns.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns, cmap='coolwarm', annot=True)
     plt.title('Heatmap de Corrélation')
