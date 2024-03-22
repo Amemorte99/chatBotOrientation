@@ -1,6 +1,1252 @@
 {
 
-   "intents": [
+   "intents": [    {
+      "tag": "formation_info",
+      "patterns": [
+        "Informations sur la formation en Commerce International",
+        "Détails de la LPCI",
+        "Que puis-je savoir sur la Licence Professionnelle en Commerce International ?"
+      ],
+      "responses": [
+        "La Licence Professionnelle en Commerce International (LPCI) à l'ESGIS est une formation de 6 semestres (3 ans) dans le domaine de la Gestion.",
+        "La formation comprend des cours en tronc commun pour les semestres 1 à 4 en présentiel, et des cours de spécialisation pour les semestres 5 et 6 en présentiel et en ligne.",
+        "Un stage obligatoire d'au moins deux mois est requis aux semestres 5 et 6, suivi de la rédaction et de la présentation d'un rapport.",
+        "Les objectifs de la formation incluent la capacité à mener des opérations de prospection et de vente à l'étranger, assurer le suivi administratif des opérations internationales et gérer les relations commerciales en langues étrangères."
+      ]
+    },
+    {
+      "tag": "profil_entree",
+      "patterns": [
+        "Profil d'entrée pour la LPCI",
+        "Conditions d'admission",
+        "Qui peut s'inscrire ?"
+      ],
+      "responses": [
+        "Cette formation est ouverte aux étudiants ayant au moins le BAC 2 séries C, D, G2, G3. Les étudiants ayant le BAC 2 séries A pourront être autorisés sous réserve d’une note supérieure ou égale à 10/20 en mathématiques."
+      ]
+    },
+    {
+      "tag": "competences_attendues",
+      "patterns": [
+        "Compétences attendues après la LPCI",
+        "Que vais-je apprendre ?",
+        "Aptitudes à acquérir"
+      ],
+      "responses": [
+        "Le futur diplômé d’une Licence Professionnelle en Commerce International peut être employé dans des organisations commerciales internationales, dans des PME et Grandes Entreprises (industrielles, de distribution et de restauration, etc.).",
+        "Les compétences attendues incluent la gestion et le développement de portefeuilles clients sur le marché international, la gestion et le développement des produits sur le marché international, l'exportation et l'importation de produits, les prospections et les négociations commerciales à l'international, ainsi que la réalisation d'études de marché à l'étranger."
+      ]
+    },
+    {
+      "tag": "debouches",
+      "patterns": [
+        "Débouchés professionnels après la LPCI",
+        "Quels sont les métiers possibles ?",
+        "Que puis-je faire après cette formation ?"
+      ],
+      "responses": [
+        "Les diplômés de la LPCI peuvent exercer en tant que négociateurs internationaux, spécialistes d’achat et vente à l’international, chargés d’affaires export-import, chefs de produit international, chargés d’études commerciales au sein des organisations internationales, et bien plus encore.",
+        "Les opportunités professionnelles sont variées et dépendent des compétences acquises."
+      ]
+    },
+    {
+      "tag": "informations_formation",
+      "patterns": [
+        "Quelles sont les informations sur la formation en MI?",
+        "Dites-moi tout sur la formation MI.",
+        "Pouvez-vous m'en dire plus sur la Licence professionnelle en MI?"
+      ],
+      "responses": [
+        "La Licence professionnelle en Management International (MI) est une formation de 3 ans dans le domaine des Sciences Économiques et de Gestion. Elle comprend un tronc commun pendant les 4 premiers semestres, suivi d'une spécialisation en cours du soir pour les semestres 5 et 6."
+      ]
+    },
+    {
+      "tag": "conditions_admission",
+      "patterns": [
+        "Quelles sont les conditions d'admission pour la LPMI?",
+        "Qui peut s'inscrire à la LPMI?",
+        "Quel est le niveau d'études requis pour cette formation?"
+      ],
+      "responses": [
+        "La LPMI est ouverte aux étudiants ayant au moins le BAC 2 toutes séries ou tout diplôme équivalent."
+      ]
+    },
+    {
+      "tag": "competences_attendues",
+      "patterns": [
+        "Quelles compétences puis-je acquérir en suivant cetteformation?",
+        "Quel est l'objectif de la formation en MI?",
+        "Que vais-je apprendre en étudiant la LPMI?"
+      ],
+      "responses": [
+        "La formation en Management International vise à développer chez les étudiants des compétences en gestion, en commerce international et en langues étrangères.",
+        "Les étudiants acquièrent des compétences en gestion d'entreprise, en marketing international, en négociation commerciale internationale, en gestion des opérations internationales, en gestion financière internationale, en logistique internationale, ainsi qu'en communication interculturelle."
+      ]
+    },
+    {
+      "tag": "debouches",
+      "patterns": [
+        "Quels sont les débouchés professionnels après la LPMI?",
+        "Quels métiers puis-je exercer après la formation?",
+        "Quelles sont les opportunités professionnelles?"
+      ],
+      "responses": [
+        "Après avoir obtenu la Licence professionnelle en Management International, vous pouvez exercer diverses fonctions dans des entreprises internationales, des organisations internationales, des agences gouvernementales, des cabinets de conseil en commerce international, des institutions financières, et bien d'autres.",
+        "Vous pouvez travailler en tant que gestionnaire de projets internationaux, responsable export/import, responsable marketing international, analyste commercial international, consultant en commerce international, ou encore chef de produit international."
+      ]
+    },
+    {
+      "tag": "alternance_info",
+      "patterns": [
+        "Informations sur l'alternance en MI",
+        "Est-ce qu'il y a une option d'alternance pour la formation en MI?",
+        "Pouvez-vous me parler de l'alternance en LPMI?"
+      ],
+      "responses": [
+        "Oui, il est possible de suivre la Licence professionnelle en Management International en alternance. L'alternance permet aux étudiants de combiner des périodes de formation théorique à l'université et des périodes de travail en entreprise.",
+        "Cela leur donne l'occasion d'acquérir une expérience professionnelle concrète tout en poursuivant leurs études."
+      ]
+    },
+    {
+      "tag": "alternance_avantages",
+      "patterns": [
+        "Quels sont les avantages de l'alternance en MI?",
+        "Pourquoi choisir l'alternance pour la formation?",
+        "Quels sont les bénéfices de l'alternance en LPMI?"
+      ],
+      "responses": [
+        "L'alternance présente plusieurs avantages. Elle permet aux étudiants d'appliquer les connaissances acquises en cours dans un environnement professionnel réel.",
+        "Cela favorise l'acquisition de compétences pratiques et facilite l'insertion professionnelle après l'obtention du diplôme.",
+        "De plus, les étudiants en alternance reçoivent une rémunération de la part de l'entreprise qui les accueille, ce qui peut contribuer à financer leurs études."
+      ]
+    },
+    {
+      "tag": "alternance_conditions",
+      "patterns": [
+        "Quelles sont les conditions pour l'alternance en MI?",
+        "Quels sont les critères d'éligibilité pour l'alternance?",
+        "Comment postuler à l'alternance en LPMI?"
+      ],
+      "responses": [
+        "Les conditions pour l'alternance en Management International peuvent varier en fonction des établissements d'enseignement.",
+        "En général, les étudiants intéressés doivent être inscrits dans la formation et trouver une entreprise prête à les accueillir en tant qu'alternants.",
+        "Il est recommandé de contacter directement l'université ou l'établissement de formation pour obtenir des informations précises sur les critères d'éligibilité et la procédure de candidature à l'alternance."
+      ]
+    },
+    {
+      "tag": "alternance_duree",
+      "patterns": [
+        "Combien de temps dure l'alternance en MI?",
+        "Quelle est la durée de l'alternance en LPMI?",
+        "Pendant combien de temps suis-je en entreprise?"
+      ],
+      "responses": [
+        "La durée de l'alternance en Licence professionnelle en Management International peut varier selon les établissements et les programmes.",
+        "En général, les périodes en entreprise peuvent durer de quelques mois à un an, réparties sur les semestres prévus pour l'alternance.",
+        "Il est important de se renseigner auprès de l'établissement de formation pour obtenir des informations précises sur la durée de l'alternance."
+      ]
+    },
+    {
+      "tag": "formation_info",
+      "patterns": [
+        "Informations sur la Licence Professionnelle en Finance Banque et Assurance",
+        "Détails de la LPFBA",
+        "Que puis-je savoir sur la formation en Finance Banque et Assurance ?"
+      ],
+      "responses": [
+        "La Licence Professionnelle en Finance Banque et Assurance (LPFBA) à l'ESGIS est une formation de 6 semestres (3 ans) dans le domaine des Sciences Economiques et de Gestion.",
+        "La formation comprend des cours en tronc commun pour les semestres 1 à 4 en présentiel, et des cours de spécialisation pour les semestres 5 et 6 en présentiel et en ligne.",
+        "Un stage obligatoire d'au moins deux mois est requis aux semestres 5 et 6, suivi de la rédaction et de la présentation d'un rapport.",
+        "Les objectifs de la formation incluent l'acquisition de compétences directement opérationnelles dans les emplois des secteurs bancaires, financiers et des assurances, ainsi que la capacité à élaborer et à traiter les informations financières et bancaires, et à gérer les opérations de base en assurance."
+      ]
+    },
+    {
+      "tag": "profil_entree",
+      "patterns": [
+        "Profil d'entrée pour la LPFBA",
+        "Conditions d'admission",
+        "Qui peut s'inscrire ?"
+      ],
+      "responses": [
+        "Cette formation est ouverte aux étudiants ayant au moins le BAC 2 séries C, D, G2."
+      ]
+    },
+    {
+      "tag": "competences_attendues",
+      "patterns": [
+        "Compétences attendues après la LPFBA",
+        "Que vais-je apprendre ?",
+        "Aptitudes à acquérir"
+      ],
+      "responses": [
+        "Les titulaires d'une licence Professionnelle en Finance Banque et Assurance vont naturellement vers les Banques, les établissements de change et de crédit, les institutions de micro finance, les établissements boursiers et les compagnies d'assurance.",
+        "Les compétences attendues incluent la capacité à appliquer les techniques bancaires, financières et d'assurance, à gérer une trésorerie, à construire un plan de financement, à gérer un portefeuille client, à utiliser les outils de gestion bancaire et financière, ainsi qu'à informer et communiquer sur les produits et services financiers."
+      ]
+    },
+    {
+      "tag": "debouches",
+      "patterns": [
+        "Débouchés professionnels après la LPFBA",
+        "Quels sont les métiers possibles ?",
+        "Que puis-je faire après cette formation ?"
+      ],
+      "responses": [
+        "La LPFBA offre de nombreux emplois accessibles, tels que trésorier ou caissier, agent de crédit, financier, gestionnaire des produits d'assurance, banquier, agent commercial d'assurances, etc.",
+        "Les opportunités professionnelles sont variées et dépendent des compétences acquises."
+      ]
+    },
+       {
+      "tag": "formation_info",
+      "patterns": [
+        "Informations sur la formation en Développement d'Application",
+        "Détails de la LPDA",
+        "Que puis-je savoir sur la Licence Professionnelle en Développement d'Application ?"
+      ],
+      "responses": [
+        "La Licence Professionnelle en Développement d'Application (LPDA) à l'ESGIS est une formation de 6 semestres (3 ans) dans le domaine de l'Informatique.",
+        "La formation comprend des cours en tronc commun pour les semestres 1 à 4 en présentiel, et des cours de spécialisation pour les semestres 5 et 6 en présentiel et en ligne.",
+        "Un stage obligatoire d'au moins deux mois est requis aux semestres 5 et 6, suivi de la rédaction et de la présentation d'unrapport.",
+        "Les objectifs de la formation incluent l'acquisition de compétences en développement d'applications, gestion de bases de données, gestion de projets informatiques, et bien plus encore."
+      ]
+    },
+    {
+      "tag": "profil_entree",
+      "patterns": [
+        "Profil d'entrée pour la LPDA",
+        "Conditions d'admission",
+        "Qui peut s'inscrire ?"
+      ],
+      "responses": [
+        "Cette formation est ouverte aux candidats titulaires des baccalauréats II séries C, D, E, F2 et F3 ou tout titre équivalent et ayant de bonnes aptitudes en mathématiques et en physique."
+      ]
+    },
+    {
+      "tag": "competences_attendues",
+      "patterns": [
+        "Compétences attendues après la LPDA",
+        "Que vais-je apprendre ?",
+        "Aptitudes à acquérir"
+      ],
+      "responses": [
+        "La LPDA permet aux futurs diplômés d'acquérir des compétences en développement d'applications, tests de logiciels, utilisation de patrons d'architecture, gestion de projets informatiques, et bien plus encore.",
+        "Les diplômés seront capables de concevoir et développer des applications et sites web, administrer des applications et des bases de données, faire de la maintenance logicielle, gérer des projets informatiques, et bien plus encore."
+      ]
+    },
+    {
+      "tag": "debouches",
+      "patterns": [
+        "Débouchés professionnels après la LPDA",
+        "Quels sont les métiers possibles ?",
+        "Que puis-je faire après cette formation ?"
+      ],
+      "responses": [
+        "Les diplômés en LPDA peuvent viser des métiers tels que développeur d'applications, administrateur de base de données pour une PME/PMI, chef de projet en conception et administration de serveurs d'applications, technico-commercial, et bien plus encore.",
+        "Les opportunités professionnelles sont variées et dépendent des compétences acquises."
+      ]
+    },
+       {
+        "tag": "informations_formation",
+        "patterns": [
+          "Quelles sont les informations sur la formation en OGRH?",
+          "Dites-moi tout sur la formation OGRH.",
+          "Pouvez-vous m'en dire plus sur la Licence professionnelle en OGRH?"
+        ],
+        "responses": [
+          "La Licence professionnelle en Organisation et Gestion des Ressources Humaines (OGRH) est une formation de 3 ans dans le domaine des Sciences Économiques et de Gestion. Elle comprend un tronc commun pendant les 4 premiers semestres, suivi d'une spécialisation en cours du soir pour les semestres 5 et 6."
+        ]
+      },
+      {
+        "tag": "conditions_admission",
+        "patterns": [
+          "Quelles sont les conditions d'admission pour la LP-OGRH?",
+          "Qui peut s'inscrire à la LP-OGRH?",
+          "Quel est le niveau d'études requis pour cette formation?"
+        ],
+        "responses": [
+          "Cette formation est ouverte aux étudiants ayant au moins le BAC 2 séries C, D, G2, G3 ou tout diplôme équivalent. Les étudiants ayant le BAC 2 séries A pourront être autorisés sous réserve d'une note supérieure ou égale à 10/20 en mathématiques au BAC 1 et au BAC 2."
+        ]
+      },
+      {
+        "tag": "competences_attendues",
+        "patterns": [
+          "Quelles compétences puis-je acquérir en suivant cette formation?",
+          "À quoi puis-je m'attendre à apprendre dans le programme OGRH?",
+          "Quelles sont les compétences attendues d'un diplômé en Organisation et Gestion des Ressources Humaines?"
+        ],
+        "responses": [
+          "Un diplômé de Licence en Organisation et Gestion des Ressources Humaines (OGRH) doit maîtriser l’élaboration d’une fiche de paie, l’utilisation d’un logiciel de paie, l’établissement d’une fiche de poste et d’une annonce de recrutement, le management et l’animation d’équipes, la gestion du personnel au quotidien, les outils principaux de la gestion des carrières, les outils de gestion des coûts de la masse salariale."
+        ]
+      },
+      {
+        "tag": "debouches_professionnels",
+        "patterns": [
+          "Quels sont les débouchés professionnels après avoir obtenu cette licence?",
+          "Quel genre de carrière puis-je envisager avec un diplôme en OGRH?",
+          "Où pourrais-je travailler après avoir terminé cette formation?"
+        ],
+        "responses": [
+          "Tout titulaire d’une LP-OGRH peut exercer en tant qu'Assistant en ressources humaines, Chargé de gestion de ressources humaines, Chargé de recrutement, Chargé de la rémunération, Chargé des relations sociales, Chargé des relations interpersonnelles, etc."
+        ]
+      },
+      {
+        "tag": "dates_importantes",
+        "patterns": [
+          "Quand commencent les inscriptions pour la LP-OGRH?",
+          "Quand débutent les cours pour la formation en OGRH?",
+          "Pouvez-vous me donner les dates clés pour cette formation?"
+        ],
+        "responses": [
+          "Les inscriptions débutent en août 2023, et les enseignements commencent en octobre 2023."
+        ]
+      },
+      {
+        "tag": "informations_contact",
+        "patterns": [
+          "Comment puis-je vous contacter pour obtenir plus d'informations?",
+          "Quelle est votre adresse e-mail?",
+          "Pouvez-vous me donner vos coordonnées?"
+        ],
+        "responses": [
+          "Vous pouvez nous contacter à l'adresse e-mail esgis.togo@esgis.org. Pour plus d'informations, vous pouvez également visiter notre site web : http://www.esgis.org."
+        ]
+      },
+      {
+        "tag": "frais_scolarite",
+        "patterns": [
+          "Combien coûte la formation en OGRH?",
+          "Quels sont les frais d'inscription pour la Licence professionnelle?",
+          "Pouvez-vous me donner des détails sur les frais de scolarité?"
+        ],
+        "responses": [
+          "Les frais d'inscription sont de 50 000 F CFA par an. Les frais de scolarité varient en fonction de l'année d'études : 400 000 F CFA pour la 1ère année, 500 000 F CFA pour la 2ème année, et 600 000 F CFA pour la 3ème année."
+        ]
+      },
+     {
+        "tag": "informations_formation",
+        "patterns": [
+          "Quelles sont les informations sur la formation en GCM?",
+          "Dites-moi tout sur la formation GCM.",
+          "Pouvez-vous m'en dire plus sur la Licence professionnelle en GCM?"
+        ],
+        "responses": [
+          "La Licence professionnelle en Gestion Commerciale et Marketing (GCM) est une formation de 3 ans dans le domaine des Sciences Économiques et de Gestion. Elle comprend un tronc commun pendant les 4 premiers semestres, suivi d'une spécialisation en cours du soir pour les semestres 5 et 6."
+        ]
+      },
+      {
+        "tag": "conditions_admission",
+        "patterns": [
+          "Quelles sont les conditions d'admission pour la LPGCM?",
+          "Qui peut s'inscrire à la LPGCM?",
+          "Quel est le niveau d'études requis pour cette formation?"
+        ],
+        "responses": [
+          "La LPGCM est ouverte aux étudiants ayant au moins le BAC 2 dans les séries C, D, G2, G3. Les étudiants avec un BAC 2 en série A peuvent être autorisés sous réserve d'une note égale ou supérieure à 10/20 en mathématiques au BAC 1 et au BAC 2."
+        ]
+      },
+      {
+        "tag": "competences_attendues",
+        "patterns": [
+          "Quelles compétences puis-je acquérir en suivant cette formation?",
+          "À quoi puis-je m'attendre à apprendre dans le programme GCM?",
+          "Quelles sont les compétences attendues d'un diplômé en Gestion Commerciale et Marketing?"
+        ],
+        "responses": [
+          "Les compétences attendues d'un diplômé de la LPGCM incluent la gestion des entreprises, la gestion spécialisée d'activités tertiaires, l'analyse du marché de l'entreprise, la prospection et la négociation, la gestion des portefeuilles produits, ainsi que la gestion des approvisionnements."
+        ]
+      },
+      {
+        "tag": "debouches_professionnels",
+        "patterns": [
+          "Quels sont les débouchés professionnels après avoir obtenu cette licence?",
+          "Quel genre de carrière puis-je envisager avec un diplôme en GCM?",
+          "Où pourrais-je travailler après avoir terminé cette formation?"
+        ],
+        "responses": [
+          "Après avoir obtenu la LPGCM, vous pouvez exercer en tant que Business developer, Gestionnaire de la clientèle junior, Gestion de la Force de Vente (FDV), Vendeur, Négociateur des affaires, Technico-commercial, Chargé des approvisionnements, et bien d'autres encore."
+        ]
+      },
+      {
+        "tag": "dates_importantes",
+        "patterns": [
+          "Quand commencent les inscriptions pour la LPGCM?",
+          "Quand débutent les cours pour la formation en GCM?",
+          "Pouvez-vous me donner les dates clés pour cette formation?"
+        ],
+        "responses": [
+          "Les inscriptions débutent en août 2023, et les enseignements commencent en octobre 2023."
+        ]
+      },
+      {
+        "tag": "informations_contact",
+        "patterns": [
+          "Comment puis-je vous contacter pour obtenir plus d'informations?",
+          "Quelle est votre adresse e-mail?",
+          "Pouvez-vous me donner vos coordonnées?"
+        ],
+        "responses": [
+          "Vous pouvez nous contacter à l'adresse e-mail esgis.togo@esgis.org. Pour plus d'informations, vous pouvez également visiter notre site web : http://www.esgis.org."
+        ]
+      },
+      {
+        "tag": "frais_scolarite",
+        "patterns": [
+          "Combien coûte la formation en GCM?",
+          "Quels sont les frais d'inscription pour la Licence professionnelle?",
+          "Pouvez-vous me donner des détails sur les frais de scolarité?"
+        ],
+        "responses": [
+          "Les frais d'inscription sont de 50 000 F CFA par an. Les frais de scolarité varient en fonction de l'année d'études : 400 000 F CFA pour la 1ère année, 500 000 F CFA pour la 2ème année, et 600 000 F CFA pour la 3ème année."
+        ]
+      },
+       {
+      "tag": "informations_formation",
+      "patterns": [
+        "Quelles sont les informations sur la formation en TSL?",
+        "Dites-moi tout sur la formation Transport et Services Logistiques (TSL).",
+        "Pouvez-vous m'en dire plus sur la Licence professionnelle en TSL?"
+      ],
+      "responses": [
+        "La Licence professionnelle en Transport et Services Logistiques (LPTSL) est une formation de 3 ans dans le domaine des Sciences Économiques et de Gestion. Elle comprend un tronc commun pendant les 4 premiers semestres, suivi d'une spécialisation en cours du soir pour les semestres 5 et 6."
+      ]
+    },
+    {
+      "tag": "conditions_admission",
+      "patterns": [
+        "Quelles sont les conditions d'admission pour la LP-TSL?",
+        "Qui peut s'inscrire à la LP-TSL?",
+        "Quel est le niveau d'études requis pour cette formation?"
+      ],
+      "responses": [
+        "Cette formation professionnalisante est ouverte aux étudiants ayant au moins le BAC 2 séries C, D, G2, G3 ou tout diplôme équivalent. Les étudiants ayant le BAC 2 série A pourront être autorisés sous réserve d'une note supérieure ou égale à 10/20 en mathématiques au BAC 1 et au BAC 2."
+      ]
+    },
+    {
+      "tag": "competences_attendues",
+      "patterns": [
+        "Quelles compétences puis-je acquérir en suivant cette formation?",
+        "À quoi puis-je m'attendre à apprendre dans le programme TSL?",
+        "Quelles sont les compétences attendues d'un diplômé en Transport et Services Logistiques?"
+      ],
+      "responses": [
+        "Le diplômé d’une La licence Professionnelle en Transport et Services Logistiques doit être capable de planifier la gestion des flux physiques, des documents douaniers et juridiques, des systèmes d’information, manager le transport maritime, aérien, fluvial, routier, gérer les entrepôts, organiser et gérer le transport des marchandises, optimiser les coûts liés aux prestations de services logistiques."
+      ]
+    },
+    {
+      "tag": "debouches_professionnels",
+      "patterns": [
+        "Quels sont les débouchés professionnels après avoir obtenu cette licence?",
+        "Quel genre de carrière puis-je envisager avec un diplôme en TSL?",
+        "Où pourrais-je travailler après avoir terminé cette formation?"
+      ],
+      "responses": [
+        "Le diplômé de la licence Professionnelle en Transport et Services Logistiques (LPTSL) peut exercer en tant que chef magasinier, responsable d’entrepôt, logisticien, transporteur de marchandises et de personnes, responsable d’exploitation transport, gestionnaire des flux de distribution, responsable d’exploitation de transport, etc."
+      ]
+    },
+    {
+      "tag": "dates_importantes",
+      "patterns": [
+        "Quand commencent les inscriptions pour la LP-TSL?",
+        "Quand débutent les cours pour la formation en TSL?",
+        "Pouvez-vous me donner les dates clés pour cette formation?"
+      ],
+      "responses": [
+        "Les inscriptions débutent en août 2023, et les enseignements commencent en octobre 2023."
+      ]
+    },
+    {
+      "tag": "informations_contact",
+      "patterns": [
+        "Comment puis-je vous contacter pour obtenir plus d'informations?",
+        "Quelle est votre adresse e-mail?",
+        "Pouvez-vous me donner vos coordonnées?"
+      ],
+      "responses": [
+        "Vous pouvez nous contacter à l'adresse e-mail esgis.togo@esgis.org. Pour plus d'informations, vous pouvez également visiter notre site web : http://www.esgis.org."
+      ]
+    },
+    {
+      "tag": "frais_scolarite",
+      "patterns": [
+        "Combien coûte la formation en TSL?",
+        "Quels sont les frais d'inscription pour la Licence professionnelle?",
+        "Pouvez-vous me donner des détails sur les frais de scolarité?"
+      ],
+      "responses": [
+        "Les frais d'inscription sont de 50 000 F CFA par an. Les frais de scolarité varient en fonction de l'année d'études : 400 000 FCFA pour la 1ère année, 500 000 F CFA pour la 2ème année, et 600 000 F CFA pour la 3ème année."
+      ]
+    },
+
+      {
+       "tag": "salutation",
+       "patterns": [
+         "Salut",
+         "Bonjour",
+         "Salutations",
+         "Coucou"
+       ],
+       "responses": [
+         "Bonjour ! Comment puis-je vous aider aujourd'hui ?"
+       ],
+       "context_set": ""
+     },
+     {
+       "tag": "présentation",
+       "patterns": [
+         "Présentez l'ESGIS",
+         "Qu'est-ce que l'ESGIS ?",
+         "Parlez-moi de l'ESGIS",
+         "L'ESGIS en quelques mots",
+         "Qui êtes-vous ?"
+       ],
+       "responses": [
+         "L'École Supérieure de Gestion et d'Informatique de Sousse (ESGIS) est une institution d'enseignement supérieur privée agréée, sous l'égide du Ministère de l'Enseignement Supérieur et de la Recherche du Togo, du Bénin et du Gabon. Elle opère dans plusieurs pays d'Afrique et est accréditée par le Conseil Africain et Malgache de l'Enseignement Supérieur (CAMES) dans diverses filières. L'ESGIS se distingue en tant qu'école de formation théorique et pratique de haut niveau. Sa mission principale est de former des cadres compétents, dynamiques, intègres et responsables dans des domaines clés tels que la gestion comptable et financière, la gestion commerciale, l'informatique, ainsi que les secteurs de technologies de pointe, notamment les télécommunications et l'électronique. L'ESGIS se démarque par ses résultats scolaires remarquables obtenus au cours de plus de vingt ans d'existence, avec un taux d'insertion professionnelle très élevé. Elle est reconnue comme l'une des meilleures écoles de la sous-région, mettant constamment l'accent sur l'excellence académique et la préparation des étudiants pour une carrière réussie."
+       ],
+       "context_set": ""
+     },
+     {
+       "tag": "mission",
+       "patterns": [
+         "Quelle est la mission de l'ESGIS ?",
+         "Mission de l'ESGIS",
+         "Objectif de l'ESGIS",
+         "Que vise l'ESGIS ?"
+       ],
+       "responses": [
+         "La mission principale de l'ESGIS est de former des cadres compétents, dynamiques, intègres et responsables dans des domaines clés tels que la gestion comptable et financière, la gestion commerciale, l'informatique, ainsi que les secteurs de technologies de pointe, notamment les télécommunications et l'électronique. Notre école vise à fournir une éducation de haute qualité qui prépare nos étudiants à réussir dans leurs futures carrières."
+       ],
+       "context_set": ""
+     },
+     {
+       "tag": "infrastructures",
+       "patterns": [
+         "Parlez-moi des infrastructures de l'ESGIS",
+         "Quelles sont les installations disponibles ?",
+         "Infrastructures de l'ESGIS",
+         "Équipements de l'ESGIS",
+         "Installations modernes"
+       ],
+       "responses": [
+         "L'ESGIS dispose d'infrastructures modernes et conviviales. Nous mettons à la disposition de nos étudiants du matériel didactique de pointe, y compris des ordinateurs, des routeurs de dernière génération, des serveurs dernière génération, des switchs, des oscilloscopes numériques à larges bandes passantes, des générateurs de fonctions, des alimentations stabilisées, des composants électroniques tels que des diodes et des transistors, et bien plus encore."
+       ],
+       "context_set": ""
+     },
+     {
+       "tag": "corps_enseignant",
+       "patterns": [
+         "Parlez-moi du corps enseignant de l'ESGIS",
+         "Qualifications des enseignants",
+         "Enseignants de l'ESGIS",
+         "Qui enseigne à l'ESGIS ?"
+       ],
+       "responses": [
+         "L'ESGIS bénéficie d'un corps enseignant de qualité qui allie l'expérience à la compétence. Nos enseignants sont hautement qualifiés dans leurs domaines respectifs, et ils sont dévoués à fournir une éducation exceptionnelle à nos étudiants."
+       ],
+       "context_set": ""
+     },
+     {
+       "tag": "salutation",
+       "patterns": [
+         "Salut",
+         "Bonjour",
+         "Salutations",
+         "Coucou"
+       ],
+       "responses": [
+         "Bonjour ! Comment puis-je vous aider aujourd'hui ?"
+       ],
+       "context_set": ""
+     },
+     {
+       "tag": "présentation",
+       "patterns": [
+         "Présentez l'ESGIS",
+         "Qu'est-ce que l'ESGIS ?",
+         "Parlez-moi de l'ESGIS",
+         "L'ESGIS en quelques mots",
+         "Qui êtes-vous ?"
+       ],
+       "responses": [
+         "L'École Supérieure de Gestion et d'Informatique de Sousse (ESGIS) est une institution d'enseignement supérieur privée agréée, sous l'égide du Ministère de l'Enseignement Supérieur et de la Recherche du Togo, du Bénin et du Gabon. Elle opère dans plusieurs pays d'Afrique et est accréditée par le Conseil Africain et Malgache de l'Enseignement Supérieur (CAMES) dans diverses filières. L'ESGIS se distingue en tant qu'école de formation théorique et pratique de haut niveau. Sa mission principale est de former des cadres compétents, dynamiques, intègres et responsables dans des domaines clés tels que la gestion comptable et financière, la gestion commerciale, l'informatique, ainsi que les secteurs de technologies de pointe, notamment les télécommunications et l'électronique. L'ESGIS se démarque par ses résultats scolaires remarquables obtenus au cours de plus de vingt ans d'existence, avec un taux d'insertion professionnelle très élevé. Elle est reconnue comme l'une des meilleures écoles de la sous-région, mettant constamment l'accent sur l'excellence académique et la préparation des étudiants pour une carrière réussie."
+       ],
+       "context_set": ""
+     },
+     {
+       "tag": "mission",
+       "patterns": [
+         "Quelle est la mission de l'ESGIS ?",
+         "Mission de l'ESGIS",
+         "Objectif de l'ESGIS",
+         "Que vise l'ESGIS ?"
+       ],
+       "responses": [
+         "La mission principale de l'ESGIS est de former des cadres compétents, dynamiques, intègres et responsables dans des domaines clés tels que la gestion comptable et financière, la gestion commerciale, l'informatique, ainsi que les secteurs de technologies de pointe, notamment les télécommunications et l'électronique. Notre école vise à fournir une éducation de haute qualité qui prépare nos étudiants à réussir dans leurs futures carrières."
+       ],
+       "context_set": ""
+     },
+     {
+       "tag": "infrastructures",
+       "patterns": [
+         "Parlez-moi des infrastructures de l'ESGIS",
+         "Quelles sont les installations disponibles ?",
+         "Infrastructures de l'ESGIS",
+         "Équipements de l'ESGIS",
+         "Installations modernes"
+       ],
+       "responses": [
+         "L'ESGIS dispose d'infrastructures modernes et conviviales. Nous mettons à la disposition de nos étudiants du matériel didactique de pointe, y compris des ordinateurs, des routeurs de dernière génération, des serveurs dernière génération, des switchs, des oscilloscopes numériques à larges bandes passantes, des générateurs de fonctions, des alimentations stabilisées, des composants électroniques tels que des diodes et des transistors, et bien plus encore."
+       ],
+       "context_set": ""
+     },
+     {
+       "tag": "corps_enseignant",
+       "patterns": [
+         "Parlez-moi du corps enseignant de l'ESGIS",
+         "Qualifications des enseignants",
+         "Enseignants de l'ESGIS",
+         "Qui enseigne à l'ESGIS ?"
+       ],
+       "responses": [
+         "L'ESGIS bénéficie d'un corps enseignant de qualité qui allie l'expérience à la compétence. Nos enseignants sont hautement qualifiés dans leurs domaines respectifs, et ils sont dévoués à fournir une éducation exceptionnelle à nos étudiants."
+       ],
+       "context_set": ""
+     },
+     {
+      "tag": "programmes",
+      "patterns": [
+        "Quels sont les programmes offerts par l'ESGIS ?",
+        "Liste des filières",
+        "Programmes d'études"
+      ],
+      "responses": [
+        "L'ESGIS propose une variété de programmes dans différents domaines. Voici quelques-unes de nos filières : Gestion comptable et financière, Gestion commerciale, Informatique de gestion, Télécommunications et réseaux, Électronique et systèmes embarqués. Chaque programme est conçu pour fournir aux étudiants les connaissances et les compétences nécessaires pour réussir dans leur domaine d'études choisi."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "admission",
+      "patterns": [
+        "Quels sont les critères d'admission à l'ESGIS ?",
+        "Processus d'admission",
+        "Comment rejoindre l'ESGIS ?"
+      ],
+      "responses": [
+        "Pour être admis à l'ESGIS, les étudiants doivent remplir certaines conditions. Cela peut inclure la réussite d'un examen d'entrée, la soumission d'un dossier de candidature complet, y compris les relevés de notes et les recommandations, ainsi que la participation à un entretien d'admission. Les critères d'admission peuvent varier en fonction du programme et du niveau d'études souhaité. Il est recommandé de contacter l'ESGIS directement pour obtenir des informations précises sur le processus d'admission."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "financement",
+      "patterns": [
+        "Y a-t-il des options de financement disponibles ?",
+        "Aides financières",
+        "Bourses d'études",
+        "Coût des études"
+      ],
+      "responses": [
+        "L'ESGIS offre des options de financement et des aides financières pour les étudiants qui en ont besoin. Cela peut inclure des bourses d'études, des prêts étudiants ou d'autres formes d'assistance financière. Les détails spécifiques sur les options de financement sont souvent disponibles auprès du service des admissions ou du bureau des affaires étudiantes de l'ESGIS. Il est recommandé de les contacter directement pour obtenir des informations précises sur les possibilités de financement."
+      ],
+      "context_set": ""
+    },
+    {
+      "tag": "contact",
+      "patterns": [
+        "Comment puis-je contacter l'ESGIS ?",
+        "Coordonnées de l'ESGIS",
+        "Adresse de l'ESGIS"
+      ],
+      "responses": [
+        "Vous pouvez contacter l'ESGIS aux coordonnées suivantes : Adresse : [adresse de l'école], Numéro de téléphone : [numéro de téléphone], Adresse e-mail : [adresse e-mail]. N'hésitez pas à les contacter pour toute demande d'information supplémentaire ou pour planifier une visite de l'établissement."
+      ],
+      "context_set": ""
+    },
+            {
+          "tag": "salutation",
+          "patterns": [
+             "Salut",
+             "Comment ça va ?",
+             "Y a-t-il quelqu'un ici ?",
+             "Bonjour",
+             "ça va ?",
+             "Hey",
+             "Quoi de neuf ?",
+             "??? ??? ??"
+          ],
+          "responses": [
+             "Bonjour !",
+             "Content de te revoir !",
+             "Salut, comment puis-je t'aider ?"
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "au_revoir",
+          "patterns": [
+             "À plus",
+             "On se voit",
+             "Au revoir",
+             "À plus tard",
+             "Au revoir",
+             "Je pars",
+             "Salut",
+             "Passe une bonne journée",
+             "On se reparle plus tard",
+             "Ttyl",
+             "Je dois y aller",
+             "Gtg"
+          ],
+          "responses": [
+             "Triste de te voir partir :(",
+             "On se reparle plus tard",
+             "Au revoir !",
+             "Reviens bientôt"
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "créateur",
+          "patterns": [
+             "Quel est le nom de tes développeurs ?",
+             "Quel est le nom de tes créateurs ?",
+             "Quel est le nom des développeurs ?",
+             "Quel est le nom des créateurs ?",
+             "Qui t'a créé ?",
+             "Tes développeurs",
+             "Tes créateurs",
+             "Qui sont tes développeurs ?",
+             "Développeurs",
+             "Tu es fait par",
+             "Tu es fait par qui ?",
+             "Qui t'a créé ?",
+             "Qui t'a créé ?",
+             "Créateurs",
+             "Qui t'a fait ?",
+             "Qui t'a conçu ?"
+          ],
+          "responses": [
+             "j'ai été créer par  KOI-SONN MANES MANA en 2023"
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "nom",
+          "patterns": [
+             "Nom",
+             "Ton nom",
+             "As-tu un nom ?",
+             "Comment devrais-je t'appeler ?",
+             "Ton nom",
+             "Qui es-tu ?",
+             "Qui es-tu ?",
+             "Qui est-ce ?",
+             "À qui je parle ?",
+             "À qui je parle ?",
+             "Qui es-tu ?"
+          ],
+          "responses": [
+             "Tu peux m'appeler Lecteur d'Esprit.",
+             "Je suis Lecteur d'Esprit.",
+             "Je suis un Chatbot.",
+             "Je suis ton assistant"
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "horaires",
+          "patterns": [
+             "Horaire de l'université",
+             "Quels sont les horaires de l'université ?",
+             "Jours de travail",
+             "Quand êtes-vous ouverts ?",
+             "Quels sont vos horaires ?",
+             "Heures d'ouverture",
+             "Quand l'université est-elle ouverte ?",
+             "Horaire de l'université",
+             "Qu'en est-il de l'horaire de l'université ?",
+             "L'université est-elle ouverte le samedi ?",
+             "Parle-moi de l'horaire de l'université",
+             "Quels sont les horaires de l'université ?",
+             "À quelle heure dois-je venir à l'université ?",
+             "Quand dois-je assister à l'université ?",
+             "Quel est mon horaire universitaire ?",
+             "Horaire de l'université",
+             "Horaire de l'université"
+          ],
+          "responses": [
+             "L'université est ouverte de 8h à 21h30 du lundi au samedi !"
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "numéro",
+          "patterns": [
+             "Plus d'informations",
+             "Coordonnées",
+             "Comment contacter l'université ?",
+             "Numéro de téléphone de l'université",
+             "Numéro de l'université",
+             "Quel est votre numéro de contact ?",
+             "Numéro de contact ?",
+             "Comment puis-je vous appeler ?",
+             "Numéro de téléphone de l'université ?",
+             "Comment puis-je vous contacter ?",
+             "Puis-je obtenir votre numéro de téléphone ?",
+             "Comment puis-je vous appeler ?",
+             "Numéro de téléphone",
+             "Numéro de téléphone",
+             "Appeler"
+          ],
+          "responses": [
+             "Vous pouvez nous contacter au : 92656873"
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "cours",
+          "patterns": [
+             "Liste des cours",
+             "Liste des cours proposés",
+             "Liste des cours proposés à l'université",
+             "Quels sont les cours proposés dans votre université ?",
+             "Cours ?",
+             "Cours proposés",
+             "Cours proposés à l'université (nom de votre université)",
+             "Cours que vous proposez",
+             "Branches ?",
+             "Cours disponibles à l'UNI ?",
+             "Branches disponibles à votre université ?",
+             "Quels sont les cours à l'UNI ?",
+             "Quelles sont les branches à l'UNI ?",
+             "Quels sont les cours à l'UNI ?",
+             "Branches disponibles à l'UNI ?",
+             "Pouvez-vous me dire quels sont les cours disponibles à l'UNI ?",
+             "Pouvez-vous me dire quelles sont les branches disponibles à l'UNI ?",
+             "Génie informatique ?",
+             "Informatique",
+             "Génie informatique ?",
+             "IT",
+             "Technologie de l'information",
+             "AI/ML",
+             "Génie mécanique",
+             "Génie chimique",
+             "Génie civil"
+          ],
+          "responses": [
+             "Notre université propose des formations en technologie de l'information, génie informatique, génie mécanique, génie chimique, génie civil et génie électrique."
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "frais",
+          "patterns": [
+             "Informations sur les frais",
+             "Informations sur les frais",
+             "Dites-moi les frais",
+             "Frais universitaires",
+             "Frais par semestre",
+             "Quels sont les frais de chaque semestre ?",
+             "Quels sont les frais de chaque année ?",
+             "Quels sont les frais ?",
+             "Quels sont les frais ?",
+             "Combien coûtent les frais ?",
+             "Frais de première année",
+             "Frais",
+             "À propos des frais",
+             "Dites-moi quelque chose sur les frais",
+             "Quels sont les frais de l'auberge ?",
+             "Combien coûtent les frais ?",
+             "Frais de l'auberge",
+             "Frais de la chambre AC",
+             "Frais de la chambre non-AC",
+             "Frais de la chambre AC pour les filles",
+             "Frais de la chambre non-AC pour les filles",
+             "Frais de la chambre AC pour les garçons",
+             "Frais de la chambre non-AC pour les garçons"
+          ],
+          "responses": [
+             "Pour plus de détails sur les frais, visitez <a target=\"_blank\" href=\"LIEN\">ici</a>"
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "emplacement",
+          "patterns": [
+             "Où est située l'université",
+             "L'université est située à",
+             "Où est l'université",
+             "Où est située l'université",
+             "Adresse de l'université",
+             "Comment se rendre à l'université",
+             "Emplacement de l'université",
+             "Adresse de l'université",
+             "Où est l'université",
+             "Comment puis-je me rendre à l'université",
+             "Quelle est l'adresse de l'université",
+             "Adresse",
+             "Emplacement"
+          ],
+          "responses": [
+             "<a target=\"_blank\" href=\"LIEN GOOGLE MAP\">ici</a>"
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "auberge",
+          "patterns": [
+             "Installations de l'auberge",
+             "Service d'auberge",
+             "Emplacement de l'auberge",
+             "Adresse de l'auberge",
+             "Installations de l'auberge",
+             "Frais d'auberge",
+             "L'université propose-t-elle une auberge ?",
+             "Y a-t-il une auberge ?",
+             "Où est l'auberge ?",
+             "Avez-vous une auberge ?",
+             "Avez-vous une auberge ?",
+             "Auberge",
+             "Capacité de l'auberge",
+             "Quels sont les frais de l'auberge ?",
+             "Comment entrer dans l'auberge",
+             "Quelle est l'adresse de l'auberge",
+             "À quelle distance se trouve l'auberge de l'université",
+             "Distance entre l'université et l'auberge",
+             "Distance entre l'auberge et l'université"
+          ],
+          "responses": [
+             "Pour plus de détails sur l'auberge, visitez <a target=\"_blank\" href=\"LIEN DE DÉTAIL DE L'AUBERGE OU TOUT LIEN D'INFORMATION OU AJOUTEZ VOS PROPRES RÉPONSES\">ici</a>"
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "événement",
+          "patterns": [
+             "Événements organisés",
+             "Liste des événements",
+             "Liste des événements organisés à l'université",
+             "Liste des événements organisés à l'université",
+             "Quels événements sont organisés à l'université",
+             "Y a-t-il des événements à l'université",
+             "Événements ?",
+             "Fonctions",
+             "Quels sont les événements",
+             "Parlez-moi des événements",
+             "Qu'en est-il des événements"
+          ],
+          "responses": [
+             "Pour plus de détails sur les événements, visitez <a target=\"_blank\" href=\"LIEN DE VOS FONCTIONS OU VOTRE PROPRE RÉPONSE\">ici</a>"
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "document",
+          "patterns": [
+             "Document à apporter",
+             "Documents nécessaires pour l'admission",
+             "Documents nécessaires lors de l'admission",
+             "Documents nécessaires pendant l'admission",
+             "Documents requis pour l'admission",
+             "Documents requis lors de l'admission",
+             "Documents requis pendant l'admission",
+             "Quels documents sont requis pour l'admission",
+             "Quels documents apporter pour l'admission",
+             "Documents",
+             "Quels documents ai-je besoin",
+             "Quels documents ai-je besoin pour l'admission",
+             "Documents nécessaires"
+          ],
+          "responses": [
+             "Pour en savoir plus sur les documents requis, visitez <a target=\"_blank\" href=\"LIEN DU DOCUMENT D'ORIENTATION DE L'ADMISSION SUR LE SITE WEB DE VOTRE UNIVERSITÉ\">ici</a>"
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "étages",
+          "patterns": [
+             "Taille du campus",
+             "Taille du bâtiment",
+             "Combien d'étages a l'université ?",
+             "Étages de l'université",
+             "Étages de l'université",
+             "Quelle est la hauteur du bâtiment de l'université de l'UNI",
+             "Étages"
+          ],
+          "responses": [
+             "Mon université a un total de 2 étages."
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "programme",
+          "patterns": [
+             "Programme pour IT",
+             "Quel est le programme de technologie de l'information ?",
+             "Programme",
+             "Emploi du temps",
+             "Quel est le programme IT",
+             "Programme",
+             "Quel est le prochain cours"
+          ],
+          "responses": [
+             "L'horaire est fourni directement aux étudiants OU pour en savoir plus sur le programme, visitez <a target=\"_blank\" href=\"LIEN DE L'HORAIRE\">ici</a>"
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "bibliothèque",
+          "patterns": [
+             "Y a-t-il une bibliothèque",
+             "Installations de bibliothèque",
+             "Installations de bibliothèque",
+             "Avez-vous une bibliothèque",
+             "L'université dispose-t-elle d'installations de bibliothèque",
+             "Bibliothèque universitaire",
+             "Où puis-je trouver des livres",
+             "Installations de livres",
+             "Où est la bibliothèque",
+             "Bibliothèque",
+             "Informations sur la bibliothèque",
+             "Informations sur les livres de bibliothèque",
+             "Parlez-moi de la bibliothèque",
+             "Combien de bibliothèques"
+          ],
+          "responses": [
+             "Il y a une grande bibliothèque spacieuse. Les horaires sont de 8h à 18h et pour plus d'informations, visitez <a target=\"blank\" href=\"AJOUTEZ UN LIEN DE DÉTAIL DE LA BIBLIOTHÈQUE\">ici</a>"
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "infrastructure",
+          "patterns": [
+             "Comment est l'infrastructure de l'université",
+             "Infrastructure",
+             "Infrastructure universitaire"
+          ],
+          "responses": [
+             "Notre université dispose d'une excellente infrastructure. Le campus est propre. Bon laboratoire informatique avec une bonne connexion Internet."
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "cantine",
+          "patterns": [
+             "Installations alimentaires",
+             "Installations de la cantine",
+             "Installation de la cantine",
+             "Y a-t-il une cantine",
+             "Y a-t-il une cafétéria à l'université",
+             "L'université dispose-t-elle d'une cantine",
+             "Où est la cantine",
+             "Où est la cafétéria",
+             "Cantine",
+             "Nourriture",
+             "Cafétéria"
+          ],
+          "responses": [
+             "Notre université dispose d'une cantine avec une variété de plats disponibles."
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "menu",
+          "patterns": [
+             "Menu alimentaire",
+             "Nourriture à la cantine",
+             "Qu'y a-t-il au menu",
+             "Qu'est-ce qui est disponible à la cantine de l'université",
+             "Quels aliments pouvons-nous obtenir à la cantine de l'université",
+             "Variété alimentaire",
+             "Qu'y a-t-il à manger ?"
+          ],
+          "responses": [
+             "Nous servons Franky, Locho, Alu-puri, Kachori, Khavsa, Thaali et bien d'autres plats au menu."
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "placement",
+          "patterns": [
+             "Qu'est-ce que le placement à l'université",
+             "Quelles entreprises visitent l'université",
+             "Quel est le salaire moyen",
+             "Entreprises qui visitent",
+             "Paquet",
+             "À propos du placement",
+             "Placement",
+             "Recrutement",
+             "Entreprises"
+          ],
+          "responses": [
+             "Pour en savoir plus sur le placement, visitez <a target=\"_blank\" href=\"LIEN D'INFORMATION SUR LE PLACEMENT SUR LE SITE WEB DE VOTRE UNIVERSITÉ SI DISPONIBLE\">ici</a>"
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "ithod",
+          "patterns": [
+             "Qui est le directeur de l'informatique",
+             "Où est le directeur de l'informatique",
+             "ithod",
+             "Nom de l'ithod"
+          ],
+          "responses": [
+             "Tous les départements d'ingénierie n'ont qu'un seul directeur, XYZ, qui est disponible à (nom du lieu)."
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "computerhod",
+          "patterns": [
+             "Qui est le directeur de l'informatique",
+             "Où est le directeur de l'informatique",
+             "ithod",
+             "Nom de l'ithod"
+          ],
+          "responses": [
+             "Tous les départements d'ingénierie n'ont qu'un seul directeur, XYZ, qui est disponible à (nom du lieu)."
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "extchod",
+          "patterns": [
+             "Qui est le directeur extc",
+             "Où est le directeur extc",
+             "directeur extc",
+             "nom du directeur extc"
+          ],
+          "responses": [
+             "Les directeurs varient d'une école à l'autre, veuillez donc être plus précis avec votre école ou votre département."
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "principal",
+          "patterns": [
+             "Quel est le nom du directeur",
+             "Quel est le nom du directeur",
+             "Nom du directeur",
+             "Qui est le directeur de l'université",
+             "Où est le bureau du directeur",
+             "Directeur",
+             "Nom du directeur"
+          ],
+          "responses": [
+             "XYZ est le directeur de l'université et si vous avez besoin d'aide, appelez d'abord le responsable de votre branche. C'est plus approprié."
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "sem",
+          "patterns": [
+             "Dates d'examen",
+             "Calendrier des examens",
+             "Quand est l'examen de semestre",
+             "Emploi du temps du semestre",
+             "sem",
+             "semestre",
+             "examen",
+             "quand est l'examen",
+             "calendrier des examens",
+             "dates d'examen",
+             "quand est le semestre"
+          ],
+          "responses": [
+             "Voici le calendrier académique <a target=\"_blank\" href=\"VOTRE CALENDRIER ACADÉMIQUE\">site web</a>"
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "admission",
+          "patterns": [
+             "Quel est le processus d'admission",
+             "Quel est le processus d'admission",
+             "Admission",
+             "Admissions ouvertes",
+             "Admissions",
+             "Comment puis-je être admis",
+             "Comment puis-je être admis à l'université",
+             "Procédure d'admission",
+             "Admission à l'université"
+          ],
+          "responses": [
+             "Pour plus d'informations sur le processus d'admission, visitez <a target=\"_blank\" href=\"LIEN DU PROCESSUS D'ADMISSION SUR LE SITE WEB DE VOTRE UNIVERSITÉ\">ici</a>"
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "département",
+          "patterns": [
+             "Départements de l'université",
+             "Liste des départements",
+             "Liste des départements de l'université",
+             "Liste des départements académiques",
+             "Liste des départements de l'université",
+             "Départements académiques",
+             "Branches académiques",
+             "Quels sont les départements à l'université",
+             "Liste des départements",
+             "Départements académiques de l'université",
+             "Liste des branches académiques",
+             "Liste des départements",
+             "Quels départements académiques avez-vous"
+          ],
+          "responses": [
+             "Notre université propose une gamme de départements académiques, notamment le génie informatique, le génie mécanique, le génie chimique, le génie civil, le génie électrique et bien d'autres. Vous pouvez en savoir plus sur nos départements sur le <a target=\"_blank\" href=\"LIEN VERS LES DÉPARTEMENTS DE L'UNIVERSITÉ\">site web</a> de l'université."
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "remerciement",
+          "patterns": [
+             "Merci",
+             "C'est utile",
+             "Merci pour votre aide",
+             "Vous êtes génial",
+             "Super",
+             "Bonne information",
+             "Je suis reconnaissant",
+             "Bon travail"
+          ],
+          "responses": [
+             "Vous êtes les bienvenus ! Si vous avez d'autres questions, n'hésitez pas à les poser."
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "non_compréhension",
+          "patterns": [
+             "Je ne comprends pas",
+             "Je ne sais pas",
+             "Peux-tu répéter ça ?",
+             "Pouvez-vous expliquer davantage ?",
+             "Je suis confus",
+             "Je ne suis pas sûr de comprendre",
+             "Je ne sais pas de quoi tu parles",
+             "Parlez-vous anglais ?"
+          ],
+          "responses": [
+             "Bien sûr ! N'hésitez pas à poser des questions spécifiques, et je ferai de mon mieux pour y répondre."
+          ],
+          "context_set": ""
+       },
+       {
+          "tag": "aide",
+          "patterns": [
+             "J'ai besoin d'aide",
+             "Pouvez-vous m'aider ?",
+             "Aidez-moi",
+             "Je suis perdu",
+             "Je ne sais pas quoi faire",
+             "Pouvez-vous me guider ?",
+             "Aide",
+             "Aidez-moi, s'il vous plaît",
+             "Besoin d'aide"
+          ],
+          "responses": [
+             "Bien sûr, je suis là pour vous aider ! Posez simplement votre question, et je ferai de mon mieux pour vous fournir les informations dont vous avez besoin."
+          ],
+          "context_set": ""
+       },
          {
       "tag": "formation_info",
       "patterns": [

@@ -60,6 +60,29 @@ def main():
     print(tabulate(df[['pattern_length', 'response_length']].describe(), headers='keys', tablefmt='grid'))
     print("\n")
 
+    # Créer la fenêtre Tkinter
+    root = tk.Tk()
+    root.title("Tableau de Données")
+
+    # Créer un widget Table à partir du DataFrame
+    frame = tk.Frame(root)
+    frame.grid(row=0, column=0, sticky="nsew")
+
+    pt = Table(frame, dataframe=df)
+    pt.show()
+
+    # Ajouter une barre de défilement
+    scroll = tk.Scrollbar(root, orient="vertical", command=pt.yview)
+    scroll.grid(row=0, column=1, sticky="ns")
+    pt.configure(yscrollcommand=scroll.set)
+
+    # Configurer le redimensionnement automatique des widgets
+    root.grid_rowconfigure(0, weight=1)
+    root.grid_columnconfigure(0, weight=1)
+
+    # Lancer l'interface graphique
+    root.mainloop()
+
     # Exclure les colonnes non numériques pour le calcul de corrélation
     numeric_cols = df.select_dtypes(include=['int', 'float']).columns
     corr = df[numeric_cols].corr()
